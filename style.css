@@ -60,11 +60,7 @@ h3{
 p{
 	color: var(--secondary-colour);
 }
-.paragraph::first-letter{
-	font-size: 72px;
-	padding: 4px 3px;
-	initial-letter: 3;
-}
+
 
 table{
 	text-align: left;
