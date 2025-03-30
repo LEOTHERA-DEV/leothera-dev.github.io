@@ -175,3 +175,11 @@ td{
 	100%{opacity: 100%;}
 }
 
+@media (max-width: 1080px){
+	.container{
+		width: 100%;
+	}
+	#scroll-content img {
+		width: 150px;
+	}
+}

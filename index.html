@@ -28,17 +28,68 @@
 		<br><br>The site is still work in progress, so expect more stuff soon!
 		</p>
 		<h2>
-			Projects
+			Featured Projects
 		</h2>
 		<div id="scroll-container">
 			<div id="scroll-content">
 				<img src="images/4x0.png">
 				<img src="images/LeonisTitle.png">
 				<img src="images/reneira.png">
+				<img src="images/TerraOS.png">
 				<img src="images/vihltara.png">
 			</div>
 		</div>
+		<h2>
+			About me
+		</h2>
+		<div class="section">
+			<p>
+				<b>What kind of stuff do I make?</b>
+			<br>I enjoy creating all sorts of things, from simple automations scripts to simple Operating Systems (all depends on how bored I'd be, heh).
+			<br>I am currently working on a handful of stuff that I intend on completing soon. These include 2 Games (<b>AXOLOTL 40, Vihltara</b>), a set of tools for game development (<b>Leonis Collection</b>), an animated series (<b>Reneira</b>) and a unique Operating System (<b>TerraOS</b>).
+			<br>
+			<br><b>Programming languages I've used</b>
+			<br>Assembly, C#, Dart, GDScript, Java, JavaScript and Python.
+			<br>I am learning a few more languages such as C and Rust, although I've yet to make some stuff with them.
+			<br>
+			<br><b>Software/Tools I use</b>
+			<br>Android Studio, Aseprite, Audacity, Blender, GB Studio, GIMP, Godot, IntelliJ, Krita, Unity, VSCode.
+			<br>I also use a bunch of self made stuff, but that list is way too long to include here.
+			<br>
+			<br><b>My thoughts on AI generated content</b>
+			<br>I am <b>100%</b> against content that is generated entirely by AI (this includes AI art, Software/games and even projects made through this "Vibe coding" nonsense). 
+			<br>I am okay with using AI to assist you with planning/design/development (as in asking questions while doing most of the work yourself).
+			<br>Having an AI create everything for you does not put you at the same level as those with the skills you lack and are not willing to obtain through practice and learning. Ordering food online does not make you a chef, after all.
+			<br>I can not stop anyone from doing this or encouraging others to embrace this level of laziness, so do as you wish but keep that <b class="glitch-text">s#!t</b> away from me.
+			<br><b>KTHXBYE</b>
+			</p>
+		</div>
 	</div>
+
+	<script>
+        function glitchEffect(element) {
+            const originalText = element.innerText;
+            const chars = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+-=';{}|?><,./[]";
+            let iterations = 0;
+
+            const glitchInterval = setInterval(() => {
+                element.innerText = originalText
+                    .split("").map((char, index) => {
+                        if (index < iterations) {return originalText[index];}
+                        return chars[Math.floor(Math.random() * chars.length)];
+                    }).join("");
+
+                if (iterations > originalText.length) {
+                    clearInterval(glitchInterval);
+                    setTimeout(() => glitchEffect(element), 0);
+                }
+                iterations += 1;
+            }, 250);
+        }
+
+        document.querySelectorAll(".glitch-text").forEach(glitchEffect);
+    </script>
+
 	<footer>
 		&copy; 2025. L&Xi;OTH&Xi;R&Lambda;.
 	</footer>
