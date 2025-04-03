@@ -17,7 +17,7 @@
   
   ::-webkit-scrollbar-thumb {
 	background: var(--background-colour);
-	border: 1px solid #BDABCA;
+	border: 1px solid var(--outline);
   }
   
   ::-webkit-scrollbar-track {
@@ -133,6 +133,14 @@ td{
 	text-align: center;
 }
 
+#banner{
+	width: 90%;
+	border-radius: 15px;
+	padding: 10px;
+	box-shadow:inset 5px 5px 10px var(--shadow-dark),
+            inset -5px -5px 10px var(--shadow-light);
+}
+
 #scroll-containter{
 	width: 100%;
 	overflow: hidden;
@@ -180,6 +188,11 @@ td{
 	.container{
 		width: 100%;
 	}
+
+	#banner{
+		display: none;
+	}
+
 	#scroll-content img {
 		width: 150px;
 	}
