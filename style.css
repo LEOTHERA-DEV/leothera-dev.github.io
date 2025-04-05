@@ -95,6 +95,11 @@ td{
 					inset 5px 5px 5px var(--shadow-dark);
 }
 
+.caption{
+	font-style: italic;
+	font-size: 14px;
+	margin-top: 0;
+}
 
 .container{
 	width: 900px;
@@ -107,7 +112,7 @@ td{
 
 .section{
 	border-radius: 15px;
-	text-align: left;
+	text-align: center;
 	color:#000000;
 	padding: 20px;
 	margin-bottom: 20px;
@@ -126,8 +131,20 @@ td{
 	margin: 0;
 }
 
-.section h2{
+.section h2, .section h3{
 	text-align: center;
+}
+
+.section li{
+	text-align: left;
+	margin: auto;
+	width: 50%;
+}
+
+.section p{
+	text-align: center;
+	margin: auto;
+	width: 80%;
 }
 
 #banner{
@@ -136,6 +153,11 @@ td{
 	padding: 10px;
 	box-shadow:inset 5px 5px 10px var(--shadow-dark),
             inset -5px -5px 10px var(--shadow-light);
+}
+
+#feature-video{
+	width: 95%;
+	padding: 10px;
 }
 
 #header{
