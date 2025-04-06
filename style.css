@@ -255,8 +255,14 @@ td{
 		display: none;
 	}
 
+	#scroll-content{
+		display: flexbox;
+		flex-direction: column;
+	}
+
 	#scroll-content img {
-		width: 150px;
+		width: 60%;
+		margin: auto;
 	}
 
 	#title, #profile-pic, #roles{
