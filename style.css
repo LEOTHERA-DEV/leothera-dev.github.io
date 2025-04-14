@@ -166,10 +166,11 @@ td{
 	height: 50px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	margin: auto;
 	z-index: 2;
 	top: 0;
 	background-color: var(--background-colour);
-	width: 100%;
+	width: 300px;
 }
 
 #header-title{
@@ -267,5 +268,9 @@ td{
 
 	#title, #profile-pic, #roles{
 		display: block;
+	}
+
+	#title-text{
+		display: none;
 	}
 }
