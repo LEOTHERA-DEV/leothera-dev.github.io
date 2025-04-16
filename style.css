@@ -2,6 +2,7 @@
 	--background-colour: #f5f5f5;
 	--primary-colour: #000000;
 	--secondary-colour: #2c2c2c;
+	/* Steel Blue: #4A83C3 */
 	--accent-colour: #4A83C3;
 	
 	--outline: #c5c5c5;
@@ -62,10 +63,17 @@ h3{
 p{
 	color: var(--secondary-colour);
 }
+
 #bottom-section{
 	background-color: var(--accent-colour);
 	height: 50px;
 	transform: translateY(-60px);
+}
+
+#bottom-logo{
+	margin-left: 20px;
+	margin-top: 5px;
+	height: 45px;
 }
 
 #card-name{
@@ -75,7 +83,7 @@ p{
 	text-decoration: none;
 	margin-top: 30px;
 	margin-left: 140px;
-	margin-right: 20px;
+	margin-right: 30px;
 	padding-left: 90px;
 	border-top-right-radius: 255px;
 }
