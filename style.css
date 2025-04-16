@@ -76,6 +76,26 @@ p{
 	height: 45px;
 }
 
+#card-content{
+	transform: translateY(-330px);
+	margin-left: 230px;
+}
+
+#card-content h2{
+	font-size: 20px;
+	margin-left: 12px;
+	margin-bottom: 0px;
+}
+
+#card-content p{
+	margin-top: 0px;
+	margin-left: 15px;
+}
+
+#card-content b{
+	font-weight: bolder;
+}
+
 #card-name{
 	background-color: var(--accent-colour);
 	color: white;
