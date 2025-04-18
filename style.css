@@ -3,7 +3,7 @@
 	--primary-colour: #000000;
 	--secondary-colour: #2c2c2c;
 	/* Steel Blue: #4A83C3 */
-	--accent-colour: #4A83C3;
+	--accent-colour: #E60012;
 	
 	--outline: #c5c5c5;
 	--shadow-dark: #c5c5c5;
@@ -66,9 +66,9 @@ p{
 
 #bottom-section{
 	background-color: var(--accent-colour);
-	height: 50px;
+	height: 55px;
 	flex-direction: row;
-	transform: translateY(-60px);
+	transform: translateY(-40px);
 }
 
 #bottom-section p{
@@ -134,6 +134,7 @@ p{
 
 #user-card{
 	display: flexbox;
+	overflow: hidden;
 	width: 600px;
 	height: 350px;
 	margin: auto;
