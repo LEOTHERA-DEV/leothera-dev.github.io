@@ -69,16 +69,29 @@ tr{
 	padding: 0;
 }
 
+.tags{
+	display: flex;
+	gap: 5px;
+	flex-wrap: wrap;
+	flex-direction:row;
+}
+
+.tags a{
+	background-color: var(--accent-colour);
+	color: white;
+	padding: 5px;
+}
+
 #about-close{
 	text-transform: uppercase;
 	margin-left: auto;
 	margin-top: auto;
-	margin-right: 5px;
-	background-color: var(--background-colour);
-	border-radius: 15px;
+	margin-right: 0;
+	background-color: var(--accent-colour);
+	color: white;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
 	padding: 10px;
-	box-shadow: 5px 5px 10px var(--shadow-dark),
-            -5px -5px 10px var(--shadow-light);
 }
 
 #about-close:hover{
@@ -124,7 +137,7 @@ tr{
 	overflow: hidden;
 	overflow-y: scroll;
 	width: 650px;
-	height: 550px;
+	height: 600px;
 	display: none;
 	position: absolute;
 	bottom: 0;
@@ -171,6 +184,10 @@ tr{
 	padding-bottom: 20px;
 	cursor: pointer;
 	transition: 0.25s;
+}
+
+#bookmarks a:active{
+	padding-bottom: 5px;
 }
 
 #bottom-section{
@@ -288,7 +305,7 @@ tr{
 
 @keyframes page-in{
 	0%{height: 0px;}
-	100%{height: 550px;}
+	100%{height: 600px;}
 }
 
 @media (max-width: 1080px){
