@@ -4,6 +4,7 @@
 	--secondary-colour: #2c2c2c;
 	/* Steel Blue: #4A83C3 */
 	--accent-colour: #E60012;
+	--accent-highlight: #b1000f;
 	
 	--outline: #c5c5c5;
 	--shadow-dark: #c5c5c5;
@@ -62,6 +63,114 @@ h3{
 
 p{
 	color: var(--secondary-colour);
+}
+
+tr{
+	padding: 0;
+}
+
+#about-close{
+	text-transform: uppercase;
+	margin-left: auto;
+	margin-top: auto;
+	margin-right: 5px;
+	background-color: var(--background-colour);
+	border-radius: 15px;
+	padding: 10px;
+	box-shadow: 5px 5px 10px var(--shadow-dark),
+            -5px -5px 10px var(--shadow-light);
+}
+
+#about-close:hover{
+	cursor: pointer;
+}
+
+#about-content{
+	padding: 15px;
+	padding-top: 0;
+}
+
+#about-content h2{
+	font-family: main-bold;
+	text-decoration: 2px solid var(--accent-colour) underline;
+}
+
+#about-content h3{
+	font-family: main-bold;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+}
+
+#about-header{
+	display: flex;
+	flex-direction: row;
+	height: 40px;
+}
+
+#about-intro{
+	padding:15px;
+	padding-bottom: 0;
+}
+
+#about-intro h1{
+	text-decoration: none;
+	font-family: main-bold;
+}
+
+#about-page{
+	background-color: var(--background-colour);
+	color: var(--primary-colour);
+	overflow: hidden;
+	overflow-y: scroll;
+	width: 650px;
+	height: 550px;
+	display: none;
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+	box-shadow: 5px 5px 10px #00000086;
+	animation: page-in 1s ease-in-out;
+}
+
+#about-page img{
+	height: 40px;
+	background-color: var(--accent-colour);
+}
+
+#bookmarks{
+	position:absolute;
+	text-transform: uppercase;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	height: 40px;
+	vertical-align: bottom;
+}
+
+#bookmarks a{
+	vertical-align: bottom;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	margin-left: 10px;
+	background-color: var(--accent-colour);
+	box-shadow: 5px 5px 10px var(--shadow-dark),
+            -5px -5px 10px var(--shadow-light);
+	transition: 0.25s;
+}
+
+#bookmarks a:hover{
+	padding-bottom: 20px;
+	cursor: pointer;
+	transition: 0.25s;
 }
 
 #bottom-section{
@@ -177,10 +286,16 @@ p{
 	100%{opacity: 100%;}
 }
 
+@keyframes page-in{
+	0%{height: 0px;}
+	100%{height: 550px;}
+}
+
 @media (max-width: 1080px){
 	#mobile-header{
 		background-color: var(--accent-colour);
 		height: 80px;
+		width: 325px;
 		padding:0;
 		margin:0;
 	}

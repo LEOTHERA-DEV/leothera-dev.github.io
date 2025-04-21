@@ -19,7 +19,6 @@
 			<img draggable="false" id="profile-pic" src="/images/profile.png">
 			<div id="bottom-section">
 				<img draggable="false" id="bottom-logo" src="images/Leothera_Text.png">
-				<p>Links coming soon</p>
 			</div>
 			<div id="card-content">
 				<h2>ARTIST | GAME DEV | PROGRAMMER</h2>
@@ -34,6 +33,77 @@
 				<br><font style="font-size: 10px;">3D Game Development, Animation, Graphic Design. Graphics Programming, Software Development, Web Development</font>
 				</p>
 			</div>
+		</div>
+		<div id="about-page">
+			<div id="about-header">
+				<img src="images/Leothera_Text.png">
+				<a id="about-close" onclick="load_page('about-page')">close</a>
+			</div>
+			<div id="about-intro">
+				<h1>
+					Kayleigh Gabi N
+				</h1>
+				<p>
+					I'm a developer from South Africa working on a wide range of random creations and solutions. I make games, software and a lot of tiny little programs to assist with day to day tasks.
+				</p>
+			</div>
+			<div id="about-content">
+				<h2>
+					Projects
+				</h2>
+				<table>
+					<tr>
+						<td><h3>AXOLOTL 40</h3></td>
+					</tr>
+					<tr>
+						<td>
+							<p>
+								3D Space shooter made in Godot inspired by classic arcade shooters and introducing a 3rd axis to an old game genre.
+							</p>
+						</td>
+					</tr>
+
+					<tr>
+						<td><h3>Leonis Collection</h3></td>
+					</tr>
+					<tr>
+						<td>
+							<p>
+								The Leonis Collection is a set of 3D tools and plugins to assist with game development. The tools range from simple management tools to large scale design tools such as Terraform, a terrain generation tool and addon for Godot.
+							</p>
+						</td>
+					</tr>
+
+					<tr>
+						<td><h3>Vihltara</h3></td>
+					</tr>
+					<tr>
+						<td>
+							<p>
+								3D Action Role Playing Game with a story and content inspired by African fantasy and modern day technology.
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<script>
+			function load_page(id){
+				var page = document.getElementById(id);
+				if (page.style.display === "none"){
+					page.style.display = "block";
+				}
+				else{
+					page.style.display = "none";
+				}
+			}
+		</script>
+
+		<div id="bookmarks">
+			<a onclick="load_page('about-page')">
+				About Me
+			</a>
 		</div>
 	</div>
 	
