@@ -253,6 +253,7 @@ tr{
 	width: 200px;
 	border-radius: 100%;
 	border: 5px solid var(--accent-colour);
+	background-color: var(--background-colour);
 	margin-left: 20px;
 	margin-top: 30px;
 	transform: translateY(-95px);
