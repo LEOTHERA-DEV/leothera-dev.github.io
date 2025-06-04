@@ -115,6 +115,12 @@ tr{
 	margin: 0;
 }
 
+#about-content img{
+	height: 200px;
+	width: 50%;
+	background-color: none;
+}
+
 #about-header{
 	display: flex;
 	flex-direction: row;
@@ -146,7 +152,7 @@ tr{
 	animation: page-in 1s ease-in-out;
 }
 
-#about-page img{
+#about-header img{
 	height: 40px;
 	background-color: var(--accent-colour);
 }

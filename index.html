@@ -28,76 +28,14 @@
 				<br><b>Location:</b> Gauteng, South Africa
 				<br><b>Email:</b> leothera.dev@gmail.com
 				<br>
-				<br><br>
+				<br>
 				<br><b>Skills:</b>
-				<br><font style="font-size: 10px;">3D Game Development, Animation, Graphic Design. Graphics Programming, Software Development, Web Development</font>
+				<br><font style="font-size: 12px;">3D Game Development, Animation, Graphic Design. Graphics Programming, Software Development, Web Development</font>
 				</p>
 			</div>
 		</div>
 		<div id="about-page">
-			<div id="about-header">
-				<img draggable="false" src="images/Leothera_Text.png">
-				<a id="about-close" onclick="load_page('about-page')">close</a>
-			</div>
-			<div id="about-intro">
-				<h1>
-					Kayleigh Gabi N
-				</h1>
-				<p>
-					I'm a developer from South Africa working on a wide range of random creations and solutions. I make games, software and a lot of tiny little programs to assist with day to day tasks.
-				</p>
-			</div>
-			<div id="about-content">
-				<h2>
-					Programming Languages
-				</h2>
-				<div class="tags">
-					<a>C#</a>
-					<a>GdScript</a>
-					<a>Java</a>
-					<a>JavaScript</a>
-					<a>Python</a>
-				</div>
 
-				<h2>Skills</h2>
-				<div class="tags">
-					<a>3D Graphics</a>
-					<a>Game Development</a>
-					<a>Software Development</a>
-					<a>Web Development</a>
-				</div>
-
-				<h2>
-					Software/Tools
-				</h2>
-				<div class="tags">
-					<a>Android Studio</a>
-					<a>Blender</a>
-					<a>GIMP</a>
-					<a>Godot</a>
-					<a>MuseScore</a>
-					<a>Vim</a>
-					<a>VSCode</a>
-				</div>
-
-				<h2>
-					Projects
-				</h2>
-				<h3>AXOLOTL 40</h3>
-				<p>
-					3D Space shooter made in Godot inspired by classic arcade shooters and introducing a 3rd axis to an old game genre.
-				</p>
-
-				<h3>Leonis Collection</h3>
-				<p>
-					The Leonis Collection is a set of 3D tools and plugins to assist with game development. The tools range from simple management tools to large scale design tools such as Terraform, a terrain generation tool and addon for Godot.
-				</p>
-
-				<h3>Vihltara</h3>
-				<p>
-					3D Action Role Playing Game with a story and content inspired by African fantasy and modern day technology.
-				</p>
-			</div>
 		</div>
 
 		<script>
@@ -110,11 +48,38 @@
 					page.style.display = "none";
 				}
 			}
+
+			function load_content(contentName){
+				const path = `page-content/${contentName}.gb`;
+				const displayElement = document.getElementById('about-page');
+
+				fetch(path).then(response => {
+					if (!response.ok){
+						throw new Error(`Unable to load ${path}`);
+					}
+					return response.text();
+				})
+				.then(content => {
+					displayElement.innerHTML = content;
+				})
+				.catch(error => {
+					displayElement.innerHTML = `<p>Unable to load content :( <br> ${error.message}</p>`;
+				});
+			}
 		</script>
 
 		<div id="bookmarks">
-			<a onclick="load_page('about-page')">
+			<a onclick="load_page('about-page'), load_content('about')">
 				About Me
+			</a>
+			<a onclick="load_page('about-page'), load_content('gallery')">
+				Gallery
+			</a>
+			<a onclick="load_page('about-page'), load_content('games')">
+				Games
+			</a>
+			<a onclick="load_page('about-page'), load_content('software-tools')">
+				Software/Tools
 			</a>
 		</div>
 	</div>
