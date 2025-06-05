@@ -30,7 +30,7 @@
     </p>
 
     <h2>
-        Project: Reneira.gb
+        Project: Reneira
     </h2>
     <img style="
         height: 200px;
@@ -43,11 +43,13 @@
     <div class="tags">
         <a>2D</a>
         <a>Adventure</a>
-        <a>GB Studio</a>
+        <a>Assembly</a>
+        <a>C</a>
         <a>GameBoy</a>
+        <a>NES</a>
     </div>
     <p>
-        A 2D demake of <b>Vihltara</b> for the GameBoy.
+        A 2D demake of <b>Vihltara</b> for the GameBoy and Nintendo Entertainment System (NES).
     </p>
 
     <h2>
