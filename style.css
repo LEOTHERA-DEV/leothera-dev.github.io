@@ -123,6 +123,7 @@ tr{
 
 #about-header{
 	display: flex;
+	background-color: var(--accent-colour);
 	flex-direction: row;
 	height: 40px;
 }
