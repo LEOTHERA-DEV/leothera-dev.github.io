@@ -1,36 +1,26 @@
-<div id="about-header">
-    <img draggable="false" src="images/Leothera_Text.png">
-    <a id="about-close" onclick="load_page('about-page')">close</a>
-</div>
-<div id="about-intro">
-    <h1>
-        Software and Tools
-    </h1>
-</div>
-<div id="about-content">
-    <h2>
+<div id="medium">
+    <h3>
         CAT-OS
-    </h2>
-    <div class="tags">
-        <a>Assembly</a>
-        <a>C</a>
-        <a>Computer Literacy</a>
-        <a>Operating System</a>
-    </div>
+    </h3>
     <p>
-        An education-focused Operating system that provides a gamified environment to learn computer basics.
+        More info will be added soon :)
     </p>
+</div>
 
-    <h2>
+<div id="medium">
+    <h3>
         Leonis Collection
-    </h2>
-    <div class="tags">
-        <a>Game Dev</a>
-        <a>GdScript</a>
-        <a>Python</a>
-        <a>Tools</a>
-    </div>
+    </h3>
     <p>
-        The Leonis Collection is a set of 3D tools and plugins to assist with game development. The tools range from simple management tools to large scale design tools such as Terraform, a terrain generation tool and addon for Godot.
+        More info will be added soon :)
+    </p>
+</div>
+
+<div id="medium">
+    <h3>
+        Pawtal
+    </h3>
+    <p>
+        More info will be added soon :)
     </p>
 </div>

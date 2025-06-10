@@ -5,53 +5,75 @@
 
 <head>
 	<title>
-		LEOTHERA's realm
+		Leothera's Site
 	</title>
 	<link rel="icon" type="image/png" href="./images/icon.png">
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<link rel="stylesheet" href="style.css">
 </head>
 
-<body oncontextmenu="return false;">
+<body oncontextmenu="return false;" onload="load_content('main')">
 	<div id="pc-layout">
-		<div id="user-card">
-			<h1 id="card-name">Kayleigh Gabi N</h1>
-			<img draggable="false" id="profile-pic" src="/images/profile.png">
-			<div id="bottom-section">
-				<img draggable="false" id="bottom-logo" src="images/Leothera_Text.png">
-			</div>
-			<div id="card-content">
-				<h2>ARTIST | GAME DEV | PROGRAMMER</h2>
-				<p>
-					<i>"Singularity Redefined"</i>
-				<br>
-				<br><b>Location:</b> Gauteng, South Africa
-				<br><b>Email:</b> leothera.dev@gmail.com
-				<br>
-				<br>
-				<br><b>Skills:</b>
-				<br><font style="font-size: 12px;">3D Game Development, Animation, Graphic Design. Graphics Programming, Software Development, Web Development</font>
-				</p>
-			</div>
+		<div id="title-bookmark">
+			<img id="header-image" 
+			draggable="false" 
+			width="200px" 
+			src="images/Leothera_Text.png">
 		</div>
-		<div id="about-page">
+		<header>
+			<a onmouseenter="load_content('about')">About</a><a onmouseenter="load_content('gallery')">Gallery</a><a onmouseenter="load_content('games')">Games</a><a onmouseenter="load_content('software-tools')">Software</a>
+		</header>
+		<section id="start-banner" onmouseleave="load_content('main')"></section>
+		<section id="content-section">
+			<h3 style="display: none;">
+				News
+			</h3>
+			<section id="news-content">
+				<div onclick="window.location = 'news-devlogs/news-0'">
+					<img draggable="false" src="images/news-devlogs/news-0.png">
+					<h3>Project: Edith. A short animated series.</h3>
+				</div>
 
-		</div>
+				<div onclick="window.location = 'news-devlogs/news-1'" style="border-radius: 0px;">
+					<img draggable="false" src="images/news-devlogs/news-1.png">
+					<h3>Creating essential tools for game dev</h3>
+				</div>
 
+				<div onclick="window.location = 'news-devlogs/news-2'" style="border-radius: 0px; border-top-right-radius: 30px;">
+					<img draggable="false" src="images/news-devlogs/news-2.png">
+					<h3>A random post about axolotls</h3>
+				</div>
+			</section>
+			<h3 style="display: none;">
+				Devlogs
+			</h3>
+			<section id="devlog-content">
+				<div onclick="window.location = 'news-devlogs/dev-0'">
+					<img draggable="false" src="images/news-devlogs/dev-0.jpg">
+					<h3>Vihltara Devlog #0</h3>
+				</div>
+
+				<div onclick="window.location = 'news-devlogs/dev-1'" style="border-radius: 0px;">
+					<img draggable="false" src="images/news-devlogs/dev-1.png">
+					<h3>Vihltara Devlog #1</h3>
+				</div>
+
+				<div onclick="window.location = 'news-devlogs/dev-2'" style="border-radius: 0px; border-bottom-right-radius: 30px;">
+					<img draggable="false" draggable="false" src="images/news-devlogs/dev-2.png">
+					<h3>Vihltara Devlog #2</h3>
+				</div>
+			</section>
+		</section>
+
+		<footer style="display: none;">
+			Copyright &copy; 2025. Leothera. All rights reserved.
+		</footer>
+		
 		<script>
-			function load_page(id){
-				var page = document.getElementById(id);
-				if (page.style.display === "none"){
-					page.style.display = "block";
-				}
-				else{
-					page.style.display = "none";
-				}
-			}
-
 			function load_content(contentName){
 				const path = `page-content/${contentName}.gb`;
-				const displayElement = document.getElementById('about-page');
+				const imagePath = `images/banner-content/${contentName}.png`
+				const displayElement = document.getElementById('start-banner');
 
 				fetch(path).then(response => {
 					if (!response.ok){
@@ -61,46 +83,20 @@
 				})
 				.then(content => {
 					displayElement.innerHTML = content;
+					displayElement.style.backgroundImage = `url('${imagePath}')`;
+					displayElement.style.backgroundSize = 'cover';
 				})
 				.catch(error => {
 					displayElement.innerHTML = `<p>Unable to load content :( <br> ${error.message}</p>`;
 				});
 			}
+		
 		</script>
-
-		<div id="bookmarks">
-			<a onclick="load_page('about-page'), load_content('about')">
-				About Me
-			</a>
-			<a onclick="load_page('about-page'), load_content('gallery')">
-				Gallery
-			</a>
-			<a onclick="load_page('about-page'), load_content('games')">
-				Games
-			</a>
-			<a onclick="load_page('about-page'), load_content('software-tools')">
-				Software/Tools
-			</a>
-		</div>
 	</div>
-	
+
 	<div id="mobile-layout">
-		<div id="mobile-body">
-			<div id="mobile-image"></div>
-
-			<div id="mobile-text">
-				<h1>
-					<b>Kayleigh Gabi N</b>
-				</h1>
-				<h2>
-					Artist | Game Dev | Programmer
-				<br>
-				<br><font style="text-transform: none;"><b class="mobile-title">Email:</b> leothera.dev@gmail.com</font>
-				</h2>
-			</div>
-			
-			<div id="mobile-footer"></div>
-		</div>
+		<h1 id="construction">
+			under construction
+		</h1>
 	</div>
-
 </html>

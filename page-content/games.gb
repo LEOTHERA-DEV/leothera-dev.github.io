@@ -1,75 +1,20 @@
-<div id="about-header">
-    <img draggable="false" src="images/Leothera_Text.png">
-    <a id="about-close" onclick="load_page('about-page')">close</a>
+<div id="medium">
+    <img width="100%" 
+    draggable="false" 
+    src="images/games-software/game-0.png">
 </div>
-<div id="about-intro">
-    <h1>
-        My Games
-    </h1>
+
+<div id="medium">
+     <h3>
+        ???
+    </h3>
+    <p>
+        Don't worry about this one
+    </p>
 </div>
-<div id="about-content">
-    <h2>
-        AXOLOTL 40
-    </h2>
-    <img style="
-        height: 200px;
-        width: 340px;
-        background: none;
-	"
-	draggable="false"
-	src="images/game-axo40.png">
-    <div class="tags">
-        <a>3D</a>
-        <a>Godot</a>
-        <a>Mobile</a>
-        <a>PC</a>
-        <a>Space</a>
-    </div>
-    <p>
-        3D Space shooter made in Godot inspired by classic arcade shooters and introducing a 3rd axis to an old game genre.
-    </p>
 
-    <h2>
-        Project: Reneira
-    </h2>
-    <img style="
-        height: 200px;
-        width: 340px;
-        background: none;
-    "
-    draggable="false"
-    src="images/game-reneira.png"
-    >
-    <div class="tags">
-        <a>2D</a>
-        <a>Adventure</a>
-        <a>Assembly</a>
-        <a>C</a>
-        <a>GameBoy</a>
-        <a>NES</a>
-    </div>
-    <p>
-        A 2D demake of <b>Vihltara</b> for the GameBoy and Nintendo Entertainment System (NES).
-    </p>
-
-    <h2>
-        Vihltara
-    </h2>
-    <img style="
-        height: 200px;
-        width: 520px;
-        background: none;
-	"
-	draggable="false"
-	src="images/game-vihltara.png">
-    <div class="tags">
-        <a>3D</a>
-        <a>Fantasy</a>
-        <a>Godot</a>
-        <a>PC</a>
-        <a>Role Playing Game</a>
-    </div>
-    <p>
-        3D Action Role Playing Game with a story and content inspired by African fantasy and modern day technology.
-    </p>
+<div id="medium">
+    <img width="100%" 
+    draggable="false" 
+    src="images/games-software/game-2.png">
 </div>

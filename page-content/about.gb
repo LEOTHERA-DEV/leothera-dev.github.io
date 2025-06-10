@@ -1,45 +1,30 @@
-<div id="about-header">
-    <img draggable="false" src="images/Leothera_Text.png">
-    <a id="about-close" onclick="load_page('about-page')">close</a>
-</div>
-<div id="about-intro">
-    <h1>
-        Kayleigh Gabi N
-    </h1>
-    <p>
-        I'm a developer from South Africa working on a wide range of random creations and solutions. I make games, software and a lot of tiny little programs to assist with day to day tasks.
+<div id="large" style="overflow-y: scroll;">
+    <h3>
+        About Me
+    </h3>
+    <p style="text-align: left; margin-left: 40px; margin-right: 40px;">
+        Creator of various interactive experiences.<br>
+        Current location: South Africa.<br>
+        <i>"Singularity Redefined"</i><br><br>
+
+        I'm an aspiring programmer and game developer among a list of other stuff.
+        <br>I have quite a handful of projects I'm currently working on, ranging from simple programs to large scale video games and even a few animation projects.
+        <br><br>
+
+        <b style="font-size: 20px;">Skills:</b>
+        <ul style="text-align: left;">
+            <li>2D and 3D Art</li>
+            <li>3D Animation</li>
+            <li>Game Development</li>
+            <li>Graphic Design</li>
+            <li>Mobile App Development</li>
+            <li>Software Engineering</li>
+            <li>Web Design and Development</li>
+        </ul>
+
+        <br>
+
+        <b>Discord:</b> gvbrielle__ | <b>Email:</b> leothera.dev@gmail.com
+        <br><b>BlueSky:</b> @leothera-dev.bsky.social
     </p>
-</div>
-<div id="about-content">
-    <h2>
-        Programming Languages
-    </h2>
-    <div class="tags">
-        <a>C#</a>
-        <a>GdScript</a>
-        <a>Java</a>
-        <a>JavaScript</a>
-        <a>Python</a>
-    </div>
-
-    <h2>Skills</h2>
-    <div class="tags">
-        <a>3D Graphics</a>
-        <a>Game Development</a>
-        <a>Software Development</a>
-        <a>Web Development</a>
-    </div>
-
-    <h2>
-        Software/Tools
-    </h2>
-    <div class="tags">
-        <a>Android Studio</a>
-        <a>Blender</a>
-        <a>GIMP</a>
-        <a>Godot</a>
-        <a>MuseScore</a>
-        <a>Vim</a>
-        <a>VSCode</a>
-    </div>
 </div>
