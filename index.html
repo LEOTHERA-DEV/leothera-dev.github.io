@@ -9,94 +9,66 @@
 	</title>
 	<link rel="icon" type="image/png" href="./images/icon.png">
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta property="og:title" content="Leothera's Site"/>
+	<meta property="og:description" content="Everything you need to know about Leothera and other stuff."/>
+	<meta property="og:image" content="images/startbanner.png"/>
+	<meta property="og:url" content="https://gvbrielle-n.github.io"/>
 	<link rel="stylesheet" href="style.css">
 </head>
 
 <body oncontextmenu="return false;" onload="load_content('main')">
 	<div id="pc-layout">
-		<div id="title-bookmark">
-			<img id="header-image" 
-			draggable="false" 
-			width="200px" 
-			src="images/Leothera_Text.png">
-		</div>
 		<header>
-			<a onmouseenter="load_content('about')">About</a><a onmouseenter="load_content('gallery')">Gallery</a><a onmouseenter="load_content('games')">Games</a><a onmouseenter="load_content('software-tools')">Software</a>
+			<a title="Link to my Discord account" href="https://discordapp.com/users/1374992760276389938">
+				<img draggable="false" src="images/icon-discord.png">
+			</a>
+			<img draggable="false" id="logo" src="images/logo.png">
+			<a title="Link to my email" href="mailto:leothera.dev@gmail.com">
+				<img draggable="false" src="images/icon-email.svg">
+			</a>
 		</header>
-		<section id="start-banner" onmouseleave="load_content('main')"></section>
-		<section id="content-section">
-			<h3 style="display: none;">
-				News
-			</h3>
-			<section id="news-content">
-				<div onclick="window.location = 'news-devlogs/news-0'">
-					<img draggable="false" src="images/news-devlogs/news-0.png">
-					<h3>Project: Edith. A short animated series.</h3>
-				</div>
-
-				<div onclick="window.location = 'news-devlogs/news-1'" style="border-radius: 0px;">
-					<img draggable="false" src="images/news-devlogs/news-1.png">
-					<h3>Creating essential tools for game dev</h3>
-				</div>
-
-				<div onclick="window.location = 'news-devlogs/news-2'" style="border-radius: 0px; border-top-right-radius: 30px;">
-					<img draggable="false" src="images/news-devlogs/news-2.png">
-					<h3>A random post about axolotls</h3>
-				</div>
-			</section>
-			<h3 style="display: none;">
-				Devlogs
-			</h3>
-			<section id="devlog-content">
-				<div onclick="window.location = 'news-devlogs/dev-0'">
-					<img draggable="false" src="images/news-devlogs/dev-0.jpg">
-					<h3>Vihltara Devlog #0</h3>
-				</div>
-
-				<div onclick="window.location = 'news-devlogs/dev-1'" style="border-radius: 0px;">
-					<img draggable="false" src="images/news-devlogs/dev-1.png">
-					<h3>Vihltara Devlog #1</h3>
-				</div>
-
-				<div onclick="window.location = 'news-devlogs/dev-2'" style="border-radius: 0px; border-bottom-right-radius: 30px;">
-					<img draggable="false" draggable="false" src="images/news-devlogs/dev-2.png">
-					<h3>Vihltara Devlog #2</h3>
-				</div>
-			</section>
+		<section id="banner">
+			<img draggable="false" src="images/bannertext.png">
 		</section>
 
-		<footer style="display: none;">
-			Copyright &copy; 2025. Leothera. All rights reserved.
-		</footer>
-		
-		<script>
-			function load_content(contentName){
-				const path = `page-content/${contentName}.gb`;
-				const imagePath = `images/banner-content/${contentName}.png`
-				const displayElement = document.getElementById('start-banner');
+		<section id="main-view">
+			<h1>
+				Hullooo, visitor
+			</h1>
+			<p>
+				I'm an aspiring programmer and game developer among a list of other stuff.
+        <br>I have quite a handful of projects I'm currently working on, so expect a lot of information here soon.
+        <br><br>
+			</p>
+			<img draggable="false" src="images/intro.png">
+			<p>
+				<b>Note:</b> This site is still under development.
+			</p>
+			<div>
+				<h2>Featured Project:</h2>
+				<img draggable="false" src="images/titlevihltara.png" 
+				style="width: 100%; border-radius: 0; background: linear-gradient(135deg, var(--background-colour), var(--secondary-background));">
+				<p>
+					<b>Vihltara</b> is an upcoming role playing game set in a unique world inspired by African fantasy.
+					<br>Planned release date: <b>24 September 2027</b>
+				</p>
+			</div>
+		</section>
 
-				fetch(path).then(response => {
-					if (!response.ok){
-						throw new Error(`Unable to load ${path}`);
-					}
-					return response.text();
-				})
-				.then(content => {
-					displayElement.innerHTML = content;
-					displayElement.style.backgroundImage = `url('${imagePath}')`;
-					displayElement.style.backgroundSize = 'cover';
-				})
-				.catch(error => {
-					displayElement.innerHTML = `<p>Unable to load content :( <br> ${error.message}</p>`;
-				});
-			}
-		
-		</script>
+		<footer>
+			&copy; 2025. Leothera. All rights reserved.
+		</footer>
 	</div>
 
 	<div id="mobile-layout">
-		<h1 id="construction">
-			under construction
-		</h1>
+		<header>
+			<img draggable="false" id="logo" src="images/logo.png">
+		</header>
+		<section style="display: flex; align-items: center;" id="main-view">
+			<p style="width: 100%; text-align: center;">Mobile page will be available soon</p>
+		</section>
+		<footer>
+			&copy; 2025. Leothera. All rights reserved.
+		</footer>
 	</div>
 </html>
