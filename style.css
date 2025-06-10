@@ -204,8 +204,6 @@ header{
 @media (max-width: 1080px){
 	body{
 		background-color: var(--background-colour);
-		height: 100vh;
-		min-height: 100vh;
 		text-align: center;
 		align-items: center;
 	}
