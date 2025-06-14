@@ -11,6 +11,10 @@
 	--outline: #c5c5c5;
 	--shadow-dark: #c5c5c5;
 	--shadow-light: #ffffff;
+	--overlay-shadow: #4d2158;
+
+	--main-gradient-start: #75d3f8;
+	--main-gradient-end: #ffffff;
 
 	--heading-font: main;
 	--primary-font: main;
@@ -164,6 +168,75 @@ header{
 	text-align: left;
 }
 
+#overlay{
+	display: none;
+	position: fixed;
+	place-items: center;
+	align-items: center;
+	bottom: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 2;
+	background-color: var(--accent-glass);
+	backdrop-filter: blur(10px);
+}
+
+#overlay-window{
+	background-color: var(--background-colour);
+	min-width: 50vw;
+	min-height: 70vh;
+	width: fit-content;
+	height: fit-content;
+	margin: auto;
+	border-radius: 15px;
+	box-shadow: 4px 4px 8px var(--overlay-shadow);
+}
+
+/* Mobile stuff */
+
+.app-icon{
+	background-color: var(--accent-glass);
+	min-width: 64px;
+	min-height: 64px;
+	margin: 0 auto;
+	width: 200px;
+	height: 200px;
+	border: none;
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+#mobile-main-view{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 30px;
+	min-height: 100vh;
+	background: linear-gradient(135deg, var(--main-gradient-start), var(--main-gradient-end));
+	height: fit-content;
+	padding: 15px;
+	padding-top: 30px;
+	align-content: flex-start;
+}
+
+#mobile-footer{
+	background-color: #0000006b;
+	width: 100vw;
+	height: 200px;
+	position: sticky;
+	bottom: 0;
+	border-radius: 15px;
+}
+
+#mobile-footer img{
+	height: 90%;
+	padding: 5px;
+	margin: auto;
+	border-radius: 100%;
+	overflow: hidden;
+	animation: loading-anim 3s linear infinite;
+}
+
 #pc-layout{
 	width: 100%;
 	height: 90vh;
@@ -201,11 +274,17 @@ header{
 	100%{height: 90vh;}
 }
 
+@keyframes loading-anim{
+	0%{transform: rotateY(0deg);}
+	100%{transform: rotateY(360deg);}
+}
+
 @media (max-width: 1080px){
 	body{
 		background-color: var(--background-colour);
 		text-align: center;
 		align-items: center;
+		overflow: hidden;
 	}
 
 	#mobile-layout{
