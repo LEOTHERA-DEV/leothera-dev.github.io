@@ -16,6 +16,29 @@
 	<link rel="stylesheet" href="style.css">
 
 	<script>
+		document.addEventListener("DOMContentLoaded", function(){
+			systemClock();
+		})
+
+		function systemClock(){
+			const clockElem = document.getElementById("clock");
+
+			const timeFormat = new Intl.DateTimeFormat("en-ZA", {
+				hour: "2-digit",
+				minute: "2-digit",
+				hour12: false,
+				timeZone: "Africa/Johannesburg",
+			});
+
+			function setTime(){
+				const now = new Date();
+				clockElem.textContent = timeFormat.format(now);
+			}
+
+			setTime();
+			setInterval(setTime, 1000);
+		}
+
 		function toggleStart(){
 			var overlayWindow = document.getElementById("overlay");
 			if (overlayWindow.style.display === "none"){
