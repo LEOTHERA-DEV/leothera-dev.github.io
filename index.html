@@ -14,34 +14,198 @@
 	<meta property="og:image" content="images/startbanner.png"/>
 	<meta property="og:url" content="https://gvbrielle-n.github.io"/>
 	<link rel="stylesheet" href="style.css">
+
+	<script>
+		function toggleStart(){
+			var overlayWindow = document.getElementById("overlay");
+			if (overlayWindow.style.display === "none"){
+				overlayWindow.style.display = "flex";
+			}
+			else{
+				overlayWindow.style.display = "none";
+			}
+		}
+		function startMain(){
+			document.getElementById("overlay").style.display = "none";
+			document.getElementById("banner").style.display = "none";
+			document.getElementById("pc-main-view").style.display = "flex";
+		}
+		function openWindow(content){
+			var targetWindow = document.getElementsByClassName(content)[0];
+			if (targetWindow.style.display === "none"){
+				targetWindow.style.display = "block";
+			}
+			else{
+				targetWindow.style.display = "none";
+			}
+		}
+		function loadGalleryContent(){
+			var galleryParent = document.getElementById("gallery-content");
+			let count = 9;
+			for (let i = 0; i < count; i++){
+				var imageLocation = `images/gallery/${i}.png`;
+				var image = document.createElement("img");
+				image.src = imageLocation;
+				image.draggable = false;
+				image.style.margin = "5px";
+				galleryParent.appendChild(image);
+			}
+		}
+	</script>
+	
 </head>
 
-<body oncontextmenu="return false;" onload="load_content('main')">
+<body onload="loadGalleryContent()" oncontextmenu="return false;">
+	
+	
 	<div id="pc-layout">
 		<section id="banner">
-			<img draggable="false" src="images/bannertext.png">
+			<img onclick="toggleStart()" draggable="false" src="images/bannertext.png">
 		</section>
 
 		<div id="overlay">
 			<div id="overlay-window">
-				
+				<button onclick="toggleStart()" id="overlay-close">X</button>
+				<h1>Welcome</h1>
+				<p>Thank you for taking the time to view my personal Website. Please note that there is still a <b>lot</b> of content I have yet to add and features to fix.
+				<br>
+				<br>In any case, I hope you enjoy!
+				<br>- Leothera
+				</p>
+				<button onclick="startMain()" id="overlay-continue-button">Get Started</button>
 			</div>
+		</div>
+
+		<section id="pc-main-view">
+			<div id="pc-icons">
+				<button onclick="openWindow('about-win')" style="
+						background-image: url('images/mobile-icons/app-about.png');
+					" class="pc-button"></button>
+				<button onclick="openWindow('gallery-win')" style="
+						background-image: url('images/mobile-icons/app-gallery.png');
+				" class="pc-button"></button>
+				<button onclick="openWindow('folder-win')" style="
+					background-image: url('images/mobile-icons/app-folder.png');
+				" class="pc-button"></button>
+				<button onclick="openWindow('vihl-win')" style="
+						background-image: url('images/mobile-icons/app-vihltara.png');
+				" class="pc-button"></button>
+			</div>
+			<div id="taskbar">
+				<button style="
+					background: none; 
+					background-image: url('images/logo.png');
+					background-size: cover;
+					" class="task-button"></button>
+
+				<div id="task-time">
+					<p id="clock">
+						00:00
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<div id="window-overlay">
+			<div id="pc-window" class="about-win">
+				<h1 id="drag-handle">About Me</h1>
+				<button id="pc-win-close" onclick="openWindow('about-win')">
+					X
+				</button>
+				<div>
+					<img src="images/profile.png">
+					<p>
+						<b>Name:</b> Kayleigh Gabi N
+					<br><b>Country:</b> South Africa
+					<br>
+					<br><b>Top Skills:</b>
+					<br><font style="font-size: 13px;">Game Dev | Graphic Design | Programming
+					<br><b>Programming Languages:</b> C#, Java, Python
+					</font>
+					<br>
+					<br><b>Email:</b> <a href="mailto:leothera.dev@gmail.com">leothera.dev@gmail.com</a>
+					</p>
+				</div>
+			</div>
+			<div onload="loadGalleryContent()" id="pc-window" class="gallery-win">
+				<h1 id="drag-handle">Gallery</h1>
+				<button id="pc-win-close" onclick="openWindow('gallery-win')">
+					X
+				</button>
+				<div id="gallery-content">
+					</div>
+			</div>
+			<div id="pc-window" class="vihl-win">
+				<h1 id="drag-handle">Cool Project - Coming Soon</h1>
+				<button id="pc-win-close" onclick="openWindow('vihl-win')">
+					X
+				</button>
+				<div>
+					<video controls controlsList="play noplaybackrate novolume nofullscreen noremoteplayback nodownload" width="480px" height="270px" src="videos/game.mp4" muted>Unable to load video</video>
+				</div>
+			</div>
+			<div id="pc-window" class="folder-win">
+				<h1 id="drag-handle">My Projects</h1>
+				<button id="pc-win-close" onclick="openWindow('folder-win')">
+					X
+				</button>
+				<p>This folder is empty</p>
+			</div>
+
+			<script>
+				document.querySelectorAll('[id="pc-window"]').forEach((dragWin) => {
+					const dragHandle = dragWin.querySelector('#drag-handle');
+					let winDragging = false;
+					let xOffset = 0;
+					let yOffset = 0;
+
+					dragHandle.addEventListener("mousedown", (e) => {
+						winDragging = true;
+
+						document.querySelectorAll('[id="pc-window"]').forEach((win) => {
+						win.style.zIndex --;
+						});
+
+						dragWin.style.zIndex = 10;
+						const rect = dragWin.getBoundingClientRect();
+						xOffset = e.clientX - rect.left;
+						yOffset = e.clientY - rect.top;
+						document.body.style.userSelect = "none";
+					});
+
+					document.addEventListener("mousemove", (e) => {
+						if (!winDragging) return;
+
+						dragWin.style.position = "fixed";
+						dragWin.style.left = `${e.clientX - xOffset}px`;
+						dragWin.style.top = `${e.clientY - yOffset}px`;
+					});
+
+					document.addEventListener("mouseup", (e)=>{
+						if (winDragging){
+							winDragging = false;
+							document.body.style.userSelect = "";
+						}
+					});
+				});
+				
+				
+			</script>
 		</div>
 	</div>
 
 	<div id="mobile-layout">
 		<section id="mobile-main-view">
-			<p style="color: #ffffff; 
-			font-size: 46px; 
-			text-align: center; 
-			text-shadow: 2px 2px 4px #000000;
-			width: 100%;"
-			>Mobile layout coming soon!</p>
-
-			<!-- <button class="app-icon"></button>
-			<button class="app-icon"></button>
-			<button class="app-icon"></button>
-			<button class="app-icon"></button> -->
+			<p>A mobile version of this site will be available soon.</p>
+			<!-- <button style="
+			background-image: url('images/mobile-icons/app-about.png');"
+			 class="app-icon"></button>
+			<button style="
+			background-image: url('images/mobile-icons/app-gallery.png');"
+			 class="app-icon"></button>
+			<button style="
+			background-image: url('images/mobile-icons/app-vihltara.png');"
+			class="app-icon"></button> -->
 		</section>
 		<footer id="mobile-footer">
 			<img draggable="false" src="images/logo.png">
