@@ -299,7 +299,7 @@ header{
 	border-radius: 3px;
 	/* box-shadow: 4px 4px 8px #00000080; */
 	border: 1px solid #000000a8;
-	animation: card-in 1s;
+	animation: card-in 0.4s;
 	backdrop-filter: blur(10px);
 	overflow: hidden;
 	pointer-events: all;
@@ -322,7 +322,9 @@ header{
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: var(--accent-glass);
+	color: #000000;
+	border: 1px solid #000000;
+	background-color: var(--background-colour);
 }
 
 .about-win img{
@@ -332,7 +334,7 @@ header{
 }
 
 .about-win a{
-	color: #ffffff;
+	color: #272af1;
 }
 
 .folder-win{
@@ -505,6 +507,7 @@ header{
 	position: absolute;
 	bottom: 0px;
 	border-top: 1px solid #000000;
+	z-index: 99999;
 }
 
 #taskbar button{
