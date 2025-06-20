@@ -106,16 +106,16 @@
 			<div id="pc-icons">
 				<button onclick="openWindow('about-win')" style="
 						background-image: url('images/mobile-icons/app-about.png');
-					" class="pc-button"></button>
+					" class="pc-button"><p>About Me</p></button>
 				<button onclick="openWindow('gallery-win')" style="
 						background-image: url('images/mobile-icons/app-gallery.png');
-				" class="pc-button"></button>
+				" class="pc-button"><p style="transform: translateY(36px);">Gallery</p></button>
 				<button onclick="openWindow('folder-win')" style="
 					background-image: url('images/mobile-icons/app-folder.png');
-				" class="pc-button"></button>
+				" class="pc-button"><p>My Projects</p></button>
 				<button onclick="openWindow('vihl-win')" style="
 						background-image: url('images/mobile-icons/app-vihltara.png');
-				" class="pc-button"></button>
+				" class="pc-button"><p>game-teaser.mp4</p></button>
 			</div>
 			<div id="taskbar">
 				<button style="
@@ -126,7 +126,7 @@
 					" class="task-button"></button>
 
 				<div id="task-time">
-					<p id="clock">
+					<p id="clock" title="Current time in my area">
 						00:00
 					</p>
 				</div>
@@ -163,7 +163,7 @@
 					</div>
 			</div>
 			<div id="pc-window" class="vihl-win">
-				<h1 id="drag-handle">Cool Project - Coming Soon</h1>
+				<h1 id="drag-handle">game-teaser.mp4 - Video Player</h1>
 				<button id="pc-win-close" onclick="openWindow('vihl-win')">
 					X
 				</button>
