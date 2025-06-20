@@ -60,6 +60,7 @@
 			}
 			else{
 				targetWindow.style.display = "none";
+				targetWindow.style.boxShadow = "none";
 			}
 		}
 		function loadGalleryContent(){
@@ -118,7 +119,8 @@
 				<button style="
 					background: none; 
 					background-image: url('images/logo.png');
-					background-size: cover;
+					background-size: contain;
+					background-repeat: no-repeat;
 					" class="task-button"></button>
 
 				<div id="task-time">
@@ -172,7 +174,9 @@
 				<button id="pc-win-close" onclick="openWindow('folder-win')">
 					X
 				</button>
-				<p>This folder is empty</p>
+				<div>
+					<p>This folder is empty</p>
+				</div>
 			</div>
 
 			<script>
@@ -187,9 +191,11 @@
 
 						document.querySelectorAll('[id="pc-window"]').forEach((win) => {
 						win.style.zIndex --;
+						win.style.boxShadow = "none";
 						});
 
 						dragWin.style.zIndex = 10;
+						dragWin.style.boxShadow = "0px 4px 8px #00000080";
 						const rect = dragWin.getBoundingClientRect();
 						xOffset = e.clientX - rect.left;
 						yOffset = e.clientY - rect.top;

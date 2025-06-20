@@ -256,7 +256,10 @@ header{
 
 #pc-main-view{
 	display: none;
-	background: linear-gradient(var(--main-gradient-start), var(--main-gradient-end));
+	/* background: linear-gradient(var(--main-gradient-start), var(--main-gradient-end)); */
+	background-image: url('images/background.png');
+	background-size: cover;
+	background-repeat: no-repeat;
 	min-height: 100vh;
 	min-width: 100vw;
 	max-height: 100vh;
@@ -282,17 +285,20 @@ header{
 
 
 .about-win, .gallery-win, .vihl-win, .folder-win{
-	background-color: var(--background-colour);
+	/* background-color: var(--background-colour); */
 	position: fixed;
 	color: #ffffff;
 	min-width: 50vw;
 	min-height: 60vh;
 	width: fit-content;
 	height: fit-content;
+	padding-left: 5px;
+	padding-right: 5px;
 	top: 100px;
 	left: 100px;
-	border-radius: 15px;
-	box-shadow: 4px 4px 8px #00000080;
+	border-radius: 3px;
+	/* box-shadow: 4px 4px 8px #00000080; */
+	border: 1px solid #000000a8;
 	animation: card-in 1s;
 	backdrop-filter: blur(10px);
 	overflow: hidden;
@@ -304,18 +310,19 @@ header{
 	min-width: 320px;
 	width: 320px;
 	min-height: 440px;
-	background-color: var(--accent-glass);
+	height: 440px;
 	justify-content: center;
 	align-items: center;
 }
 
 .about-win div{
 	display: flex;
-	padding-top: 10px;
+	height: 400px;
 	font-size: 18px;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	background-color: var(--accent-glass);
 }
 
 .about-win img{
@@ -328,26 +335,44 @@ header{
 	color: #ffffff;
 }
 
-.folder-win p{
+.folder-win{
+	min-width: 480px;
+	min-height: 320px;
+	width: 480px;
+	height: 320px;
+}
+
+.folder-win p {
 	width: 100%;
 	text-align: center;
-	color: var(--primary-colour);
+	margin: 0;
+}
+
+.folder-win div{
+	background-color: var(--background-colour);
+	width: 100%;
+	padding: 0;
+	height: 280px;
+	color: #000000;
+	border: 1px solid #000000;
 }
 
 .gallery-win{
 	min-width: 540px;
-	height: 60vh;
+	min-height: 320px;
+	height: 320px;
 	width: 540px;
 }
 
 .gallery-win div{
 	width: 100%;
-	height: 80%;
-	padding: 10px;
+	height: 280px;
 	display: flexbox;
+	background-color: var(--background-colour);
 	flex-direction: row;
 	gap: 5px;
 	overflow-y: scroll;
+	border: 1px solid #000000;
 }
 
 .gallery-win img{
@@ -370,12 +395,12 @@ header{
 	min-height: 540px;
 	height: 540px;
 	overflow: hidden;
-	background-color: #000000;
 }
 
 .vihl-win div{
 	width: 100%;
-	height: 100%;
+	height: 500px;
+	background-color: #000000;
 }
 
 .vihl-win video{
@@ -394,12 +419,12 @@ header{
 }
 
 #drag-handle{
-	background-color: var(--accent-colour);
 	color: #ffffff;
 	padding: 5px 10px;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	width: 100%;
+	font-size: 20px;
 	pointer-events: all;
 }
 
@@ -413,17 +438,21 @@ header{
 
 #pc-win-close{
 	position: absolute;
-	height: 32px;
-	width: 32px;
-	top: 10px;
-	right: 10px;
-	background-color: var(--accent-colour);
+	height: 20px;
+	width: 40px;
+	font-size: 10px;
+	top: 0px;
+	right: 5px;
+	background-color: #a813138c;
 	color: #ffffff;
-	border: 1px solid var(--outline);
+	border: 1px solid #000000;
+	border-top: none;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
 }
 
 #pc-win-close:hover{
-	background-color: var(--accent-highlight);
+	filter: brightness(120%);
 	cursor: pointer;
 }
 
@@ -463,29 +492,35 @@ header{
 
 #taskbar{
 	min-width: 100vw;
-	min-height: 60px;
+	min-height: 40px;
 	display: flex;
 	flex-direction: row;
 	gap: 10px;
 	width: 100vw;
-	height: 60px;
+	height: 40px;
 	padding-left: 10px;
 	padding-right: 10px;
-	background-color: var(--accent-glass);
+	background-color: #293a886c;
+	backdrop-filter: blur(15px);
 	position: absolute;
 	bottom: 0px;
+	border-top: 1px solid #000000;
+}
+
+#taskbar button{
+	min-height: 30px;
+	height: 30px;
 }
 
 #task-time{
 	display: flex;
 	place-items: center;
 	margin-left: auto;
-	margin-top: 2px;
 	color: #ffffff;
 	min-width: 10vw;
 	width: fit-content;
-	min-height: 90%;
-	height: 90%
+	min-height:70%;
+	height: 70%
 }
 
 #clock{
