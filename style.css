@@ -375,6 +375,27 @@ header{
 	width: 540px;
 }
 
+.gallery-win div::-webkit-scrollbar{
+	width: 20px;
+}
+
+.gallery-win div::-webkit-scrollbar-thumb{
+	background: linear-gradient(to right, #ffffff, #d0d0d0);
+}
+
+.gallery-win div::-webkit-scrollbar-thumb:hover{
+	cursor: grab;
+}
+
+.gallery-win div::-webkit-scrollbar-thumb:active{
+	cursor: grabbing;
+}
+
+.gallery-win div::-webkit-scrollbar-track{
+	background-color: #e3e3e3;
+	box-shadow: none;
+}
+
 .gallery-win div{
 	width: 100%;
 	height: 280px;
@@ -401,22 +422,24 @@ header{
 }
 
 .vihl-win{
-	min-width: 960;
-	width: 960px;
-	min-height: 540px;
-	height: 540px;
+	min-width: 640;
+	width:640px;
+	min-height: 380px;
+	height: 400px;
 	overflow: hidden;
 }
 
 .vihl-win div{
 	width: 100%;
-	height: 500px;
+	height: 360px;
 	background-color: #000000;
 }
 
 .vihl-win video{
 	width: 100%;
-	height: 90%;
+	height: 360px;
+	padding: 0;
+	margin: 0;
 	color: #ffffff;
 	background-color: #000000;
 }
