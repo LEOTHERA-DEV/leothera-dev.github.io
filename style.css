@@ -616,8 +616,6 @@ header{
 #topbar p{
 	margin: 0;
 	width: 100%;
-	text-align: left;
-	transform: translateX(15px);
 }
 
 .app-icon{
@@ -696,6 +694,7 @@ header{
 	padding: 15px;
 	padding-top: 50px;
 	align-content: flex-start;
+	overflow: hidden;
 }
 
 #mobile-main-view p{
