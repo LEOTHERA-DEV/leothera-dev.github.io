@@ -22,6 +22,7 @@
 
 		function systemClock(){
 			const clockElem = document.getElementById("clock");
+			const mobileClock = document.getElementById("mobile-clock");
 
 			const timeFormat = new Intl.DateTimeFormat("en-ZA", {
 				hour: "2-digit",
@@ -33,6 +34,7 @@
 			function setTime(){
 				const now = new Date();
 				clockElem.textContent = timeFormat.format(now);
+				mobileClock.textContent = timeFormat.format(now);
 			}
 
 			setTime();
@@ -75,6 +77,19 @@
 				galleryParent.appendChild(image);
 			}
 		}
+
+		function loadMobileGalleryContent(){
+				var galleryParent = document.getElementById("mobile-gallery-content");
+				let count = 9;
+				for (let i = 0; i < count; i++){
+					var imageLocation = `/images/gallery/${i}.png`;
+					var image = document.createElement("img");
+					image.src = imageLocation;
+					image.draggable = false;
+					image.style.margin = "5px";
+					galleryParent.appendChild(image);
+				}
+			}
 	</script>
 	
 </head>
@@ -226,18 +241,73 @@
 	</div>
 
 	<div id="mobile-layout">
+		<div id="topbar">
+				<p id="mobile-clock">
+					00:00
+				</p>
+		</div>
 		<section id="mobile-main-view">
-			<p>A mobile version of this site will be available soon.</p>
-			<!-- <button style="
-			background-image: url('images/mobile-icons/app-about.png');"
-			 class="app-icon"></button>
-			<button style="
-			background-image: url('images/mobile-icons/app-gallery.png');"
-			 class="app-icon"></button>
-			<button style="
-			background-image: url('images/mobile-icons/app-vihltara.png');"
-			class="app-icon"></button> -->
+			<!-- Row 1 -->
+			<button class="app-icon" 
+			onclick="openApp('about', 'About Me')" 
+			id="mobile-about" style="
+			background-image: url('images/mobile-icons/app-about.png');"></button>
+			<button class="app-icon" 
+			onclick="openApp('gallery', 'Gallery')"
+			id="mobile-gallery" style="
+			background-image: url('images/mobile-icons/app-gallery.png');"></button>
+			<button class="app-icon"
+			onclick="openApp('projects', 'My Projects')"
+			id="mobile-projects" style="
+			background-image: url('images/mobile-icons/app-folder.png');"></button>
+			
+			<script>
+				function openApp(app, title){
+					var appTitle = document.getElementById("mobile-app-title");
+					var appPath = `mobile-content/${app}.html`;
+					var appWindow = document.getElementById("mobile-app-view");
+					var appContent = document.getElementById("mobile-app-content");
+					
+					document.getElementById("mobile-main-view").style.display = "none";
+					appContent.innerHTML = "Loading Application";
+					fetch(appPath).then(response => {
+						if(!response.ok){
+							throw new Error("HTTP Error");
+						}
+						return response.text();
+					}).then(html => {
+						appContent.innerHTML = html;
+						if (app === "gallery"){
+							loadMobileGalleryContent();
+						}
+					}).catch(err =>{
+						appContent.innerHTML = "Unable to load application";
+						console.error("Fetch Error", err);
+					});
+
+					appTitle.innerHTML = title;
+					appWindow.style.display = "flex";
+				}
+			</script>
 		</section>
+		<div id="mobile-app-view">
+			<div id="mobile-app-header">
+				<button id="mobile-app-back"
+				onclick="closeApp()">&LeftAngleBracket;</button>
+				<h1 id="mobile-app-title">Application</h1>
+			</div>
+			<div id="mobile-app-content">
+				<p>
+					Loading app...
+				</p>
+			</div>
+			<script>
+				function closeApp(){
+					document.getElementById("mobile-main-view").style.display = "flex";
+					document.getElementById("mobile-app-view").style.display = "none";
+				}
+			</script>
+		</div>
 		<footer id="mobile-footer">
 			<img draggable="false" src="images/logo.png">
 		</footer>

@@ -601,18 +601,88 @@ header{
 
 
 /* Mobile stuff */
+#topbar{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: fit-content;
+	margin: 0;
+	background: linear-gradient(#00000050, #00000000);
+	color: #ffffff;
+	z-index: 3;
+	font-size: 36px;
+}
+
+#topbar p{
+	margin: 0;
+	width: 100%;
+	text-align: right;
+	transform: translateX(-15px);
+}
 
 .app-icon{
-	background-color: var(--accent-glass);
+	background-color: var(--accent-colour);
 	background-size: cover;
-	min-width: 64px;
-	min-height: 64px;
+	min-width: 32px;
+	min-height: 32px;
 	margin: 0 auto;
-	width: 200px;
-	height: 200px;
+	width: 150px;
+	height: 150px;
 	border: none;
 	border-radius: 15px;
+	filter: brightness(120%);
 	overflow: hidden;
+}
+
+.app-icon:active{
+	filter: brightness(90%);
+}
+
+#mobile-app-view{
+	display: none;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 30;
+	background-color: var(--background-colour);
+	font-size: 36px;
+}
+
+#mobile-app-view img{
+	width: 50vw;
+}
+
+#mobile-app-content{
+	overflow-y: auto;
+}
+
+#mobile-app-header{
+	background-color: var(--accent-colour);
+	min-width: 100vw;
+	width: 100vw;
+	min-height: 100px;
+	height: fit-content;
+	display: flex;
+	flex-direction: row;
+}
+
+#mobile-app-back{
+	background-color: var(--accent-colour);
+	border: none;
+	color: #ffffff;
+	min-width: 150px;
+	font-size: 50px;
+	border-radius: 100%;
+}
+
+#mobile-app-title{
+	color: #ffffff;
+	font-size: 48px;
+	width: 100%;
+	text-align: left;
 }
 
 #mobile-main-view{
@@ -624,7 +694,7 @@ header{
 	background: linear-gradient(135deg, var(--main-gradient-start), var(--main-gradient-end));
 	height: fit-content;
 	padding: 15px;
-	padding-top: 30px;
+	padding-top: 50px;
 	align-content: flex-start;
 }
 
@@ -639,7 +709,7 @@ header{
 #mobile-footer{
 	background-color: #0000006b;
 	width: 100vw;
-	height: 200px;
+	height: 100px;
 	position: sticky;
 	bottom: 0;
 	border-radius: 15px;
@@ -651,7 +721,6 @@ header{
 	margin: auto;
 	border-radius: 100%;
 	overflow: hidden;
-	animation: loading-anim 3s linear infinite;
 }
 
 #pc-layout{
