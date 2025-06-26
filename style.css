@@ -616,8 +616,8 @@ header{
 #topbar p{
 	margin: 0;
 	width: 100%;
-	text-align: right;
-	transform: translateX(-15px);
+	text-align: left;
+	transform: translateX(15px);
 }
 
 .app-icon{
