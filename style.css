@@ -604,17 +604,19 @@ header{
 #topbar{
 	position: absolute;
 	top: 0;
-	width: 100%;
+	width: 100vw;
 	height: fit-content;
 	margin: 0;
-	background: linear-gradient(#00000050, #00000000);
+	background-color: #00000050;
 	color: #ffffff;
 	z-index: 3;
 	font-size: 36px;
+	overflow: hidden;
 }
 
 #topbar p{
 	margin: 0;
+	text-align: left;
 	width: 100%;
 }
 
