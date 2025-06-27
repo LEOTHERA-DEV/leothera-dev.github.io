@@ -1,11 +1,54 @@
-<img style="margin-top: 20vh; border-radius: 100%;" src="../images/profile.png">
+<style>
+    .about-button{
+        background-color: var(--accent-colour);
+        width: 90vw;
+        min-height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 50px;
+        border-radius: 15px;
+        padding: 30px;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .about-section{
+        background-color: #f0f0f0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    #about-contacts{
+        margin-top: 30px;
+        min-height: 30vh;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        gap: 5px;
+    }
+    
+    p{
+        font-size: 42px;
+    }
+</style>
+
+<img style="margin-top: 50px; border-radius: 100%;" src="../images/profile.png">
 <h1>Kayleigh Gabi N</h1>
 <p>
     <b>Country:</b> South Africa
-<br>
-<br><b>Top Skills:</b>
+</p>
+
+<div class="about-section">
+    <b style="font-size: 48px;">Top Skills:</b>
 <br>Game Dev | Graphic Design | Programming
 <br><b>Programming Languages:</b> C#, Java, Python
-<br>
-<br><b>Email:</b> <a href="mailto:leothera.dev@gmail.com">leothera.dev@gmail.com</a>
-</p>
+</div>
+
+<div id="about-contacts">
+    <h2>
+        Links
+    </h2>
+    <a class="about-button" target="_blank" href="http://discord.com/users/548392421696733184">Discord</a>
+    <a class="about-button" href="mailto:leothera.dev@gmail.com">Email</a>
+</div>
