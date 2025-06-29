@@ -698,8 +698,8 @@ header{
 	flex-direction: row;
 	flex-wrap: wrap;
 	gap: 30px;
-	min-height: 90vh;
-	height: fit-content;
+	min-height: 80vh;
+	height: 80vh;
 	padding: 15px;
 	padding-top: 100px;
 	align-content: flex-end;
