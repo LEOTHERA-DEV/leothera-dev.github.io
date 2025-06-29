@@ -605,12 +605,13 @@ header{
 	position: absolute;
 	top: 0;
 	width: 100vw;
+	min-height: 50px;
 	height: fit-content;
 	margin: 0;
 	background-color: #00000050;
 	color: #ffffff;
 	z-index: 3;
-	font-size: 36px;
+	font-size: 42px;
 	overflow: hidden;
 }
 
@@ -621,15 +622,15 @@ header{
 }
 
 .app-icon{
-	background-color: var(--accent-colour);
+	background-color: var(--accent-glass);
 	background-size: cover;
-	min-width: 25vw;
-	min-height: 25vw;
+	min-width: 20vw;
+	min-height: 20vw;
 	margin: 0 auto;
 	width: 150px;
 	height: 150px;
 	border: none;
-	border-radius: 15px;
+	border-radius: 50px;
 	filter: brightness(120%);
 	overflow: hidden;
 }
@@ -648,8 +649,14 @@ header{
 	left: 0;
 	z-index: 30;
 	overflow-x: hidden;
-	background-color: var(--background-colour);
+	/* background-color: var(--background-colour); */
+	background-color: #130d13;
+	color: #ffffff;
 	font-size: 36px;
+}
+
+#mobile-app-view h1, #mobile-app-view h2, #mobile-app-view h3{
+	color: #ffffff;
 }
 
 #mobile-app-view img{
@@ -691,12 +698,11 @@ header{
 	flex-direction: row;
 	flex-wrap: wrap;
 	gap: 30px;
-	min-height: 100vh;
-	background: linear-gradient(135deg, var(--main-gradient-start), var(--main-gradient-end));
+	min-height: 90vh;
 	height: fit-content;
 	padding: 15px;
 	padding-top: 100px;
-	align-content: flex-start;
+	align-content: flex-end;
 	overflow: hidden;
 }
 
@@ -780,7 +786,7 @@ header{
 
 @media (max-width: 1080px){
 	body{
-		background-color: var(--background-colour);
+		background-color: #403346;
 		text-align: center;
 		align-items: center;
 		overflow: hidden;
