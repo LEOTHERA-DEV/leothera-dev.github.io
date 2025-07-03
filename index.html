@@ -5,311 +5,33 @@
 
 <head>
 	<title>
-		Leothera's Site
+		Leothera | Home
 	</title>
 	<link rel="icon" type="image/png" href="./images/icon.png">
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<meta property="og:title" content="Leothera's Site"/>
-	<meta property="og:description" content="Everything you need to know about Leothera and other stuff."/>
+	<meta property="og:description" content="Games, Art and all the other cool stuff."/>
 	<meta property="og:image" content="images/startbanner.png"/>
 	<meta property="og:url" content="https://gvbrielle-n.github.io"/>
 	<link rel="stylesheet" href="style.css">
 
-	<script>
-		document.addEventListener("DOMContentLoaded", function(){
-			systemClock();
-		})
-
-		function systemClock(){
-			const clockElem = document.getElementById("clock");
-			const mobileClock = document.getElementById("mobile-clock");
-
-			const timeFormat = new Intl.DateTimeFormat("en-ZA", {
-				hour: "2-digit",
-				minute: "2-digit",
-				hour12: false,
-				timeZone: "Africa/Johannesburg",
-			});
-
-			function setTime(){
-				const now = new Date();
-				clockElem.textContent = timeFormat.format(now);
-				mobileClock.textContent = timeFormat.format(now);
-			}
-
-			setTime();
-			setInterval(setTime, 1000);
-		}
-
-		function toggleStart(){
-			var overlayWindow = document.getElementById("overlay");
-			if (overlayWindow.style.display === "none"){
-				overlayWindow.style.display = "flex";
-			}
-			else{
-				overlayWindow.style.display = "none";
-			}
-		}
-		function startMain(){
-			document.getElementById("overlay").style.display = "none";
-			document.getElementById("banner").style.display = "none";
-			document.getElementById("pc-main-view").style.display = "flex";
-		}
-		function openWindow(content){
-			var targetWindow = document.getElementsByClassName(content)[0];
-			if (targetWindow.style.display === "none"){
-				targetWindow.style.display = "block";
-			}
-			else{
-				targetWindow.style.display = "none";
-				targetWindow.style.boxShadow = "none";
-			}
-		}
-		function loadGalleryContent(){
-			var galleryParent = document.getElementById("gallery-content");
-			let count = 9;
-			for (let i = 0; i < count; i++){
-				var imageLocation = `images/gallery/${i}.png`;
-				var image = document.createElement("img");
-				image.src = imageLocation;
-				image.draggable = false;
-				image.style.margin = "5px";
-				galleryParent.appendChild(image);
-			}
-		}
-
-		function loadMobileGalleryContent(){
-				var galleryParent = document.getElementById("mobile-gallery-content");
-				let count = 9;
-				for (let i = 0; i < count; i++){
-					var imageLocation = `/images/gallery/${i}.png`;
-					var image = document.createElement("img");
-					image.src = imageLocation;
-					image.draggable = false;
-					image.style.margin = "5px";
-					galleryParent.appendChild(image);
-				}
-			}
-	</script>
+	<meta name="description" content="I'm Leothera. I make art, games and write code.">
 	
 </head>
 
-<body onload="loadGalleryContent()" oncontextmenu="return false;">
-	
-	
-	<div id="pc-layout">
-		<section id="banner">
-			<img onclick="toggleStart()" draggable="false" src="images/bannertext.png">
-		</section>
+<body>
+	<ul id="navigation-bar">
+		<li><a href=""><img draggable="false" src="images/logo.png" height="24px"></a></li>
+		<li><a href="">About</a></li>
+		<li><a href="">Gallery</a></li>
+		<li><a href="">Projects</a></li>
+	</ul>
+	<section id="first-section">
+		<h1>Vihltara: Coming Soon</h1>
+	</section>
+	<section id="second-section">
+		E
+	</section>
+</body>
 
-		<div id="overlay">
-			<div id="overlay-window">
-				<button onclick="toggleStart()" id="overlay-close">X</button>
-				<h1>Welcome</h1>
-				<div>					
-					<p>Thank you for taking the time to view my personal Website.
-					<br>This site is still in its early stages, but feel free to check it out and give feedback if you want.
-					<br>
-					<br>- Leothera
-					</p>
-					<button onclick="startMain()" id="overlay-continue-button">Get Started</button>
-				</div>	
-			</div>
-		</div>
-
-		<section id="pc-main-view">
-			<div id="pc-icons">
-				<button onclick="openWindow('about-win')" style="
-						background-image: url('images/mobile-icons/app-about.png');
-					" class="pc-button"><p>About Me</p></button>
-				<button onclick="openWindow('gallery-win')" style="
-						background-image: url('images/mobile-icons/app-gallery.png');
-				" class="pc-button"><p style="transform: translateY(36px);">Gallery</p></button>
-				<button onclick="openWindow('folder-win')" style="
-					background-image: url('images/mobile-icons/app-folder.png');
-				" class="pc-button"><p>My Projects</p></button>
-				<button onclick="openWindow('vihl-win')" style="
-						background-image: url('images/mobile-icons/app-vihltara.png');
-				" class="pc-button"><p>game-teaser.mp4</p></button>
-			</div>
-			<div id="taskbar">
-				<button style="
-					background: none; 
-					background-image: url('images/logo.png');
-					background-size: contain;
-					background-repeat: no-repeat;
-					" class="task-button"></button>
-
-				<div id="task-time">
-					<p id="clock" title="Current time in my area">
-						00:00
-					</p>
-				</div>
-			</div>
-		</section>
-
-		<div id="window-overlay">
-			<div id="pc-window" class="about-win">
-				<h1 id="drag-handle">About Me</h1>
-				<button id="pc-win-close" onclick="openWindow('about-win')">
-					X
-				</button>
-				<div>
-					<img src="images/profile.png">
-					<p>
-						<b>Name:</b> Kayleigh Gabi N
-					<br><b>Country:</b> South Africa
-					<br>
-					<br><b>Top Skills:</b>
-					<br><font style="font-size: 13px;">Game Dev | Graphic Design | Programming
-					<br><b>Programming Languages:</b> C#, Java, Python
-					</font>
-					<br>
-					<br><b>Email:</b> <a href="mailto:leothera.dev@gmail.com">leothera.dev@gmail.com</a>
-					</p>
-				</div>
-			</div>
-			<div onload="loadGalleryContent()" id="pc-window" class="gallery-win">
-				<h1 id="drag-handle">Gallery</h1>
-				<button id="pc-win-close" onclick="openWindow('gallery-win')">
-					X
-				</button>
-				<div id="gallery-content">
-					</div>
-			</div>
-			<div id="pc-window" class="vihl-win">
-				<h1 id="drag-handle">game-teaser.mp4 - Video Player</h1>
-				<button id="pc-win-close" onclick="openWindow('vihl-win')">
-					X
-				</button>
-				<div>
-					<video controls controlsList="play noplaybackrate novolume nofullscreen noremoteplayback nodownload" width="480px" height="270px" src="videos/game.mp4" muted>Unable to load video</video>
-				</div>
-			</div>
-			<div id="pc-window" class="folder-win">
-				<h1 id="drag-handle">My Projects</h1>
-				<button id="pc-win-close" onclick="openWindow('folder-win')">
-					X
-				</button>
-				<div>
-					<p>This folder is empty</p>
-				</div>
-			</div>
-
-			<script>
-				document.querySelectorAll('[id="pc-window"]').forEach((dragWin) => {
-					const dragHandle = dragWin.querySelector('#drag-handle');
-					let winDragging = false;
-					let xOffset = 0;
-					let yOffset = 0;
-
-					dragHandle.addEventListener("mousedown", (e) => {
-						winDragging = true;
-
-						document.querySelectorAll('[id="pc-window"]').forEach((win) => {
-						win.style.zIndex --;
-						win.style.boxShadow = "none";
-						});
-
-						dragWin.style.zIndex = 10;
-						dragWin.style.boxShadow = "0px 4px 8px #00000080";
-						const rect = dragWin.getBoundingClientRect();
-						xOffset = e.clientX - rect.left;
-						yOffset = e.clientY - rect.top;
-						document.body.style.userSelect = "none";
-					});
-
-					document.addEventListener("mousemove", (e) => {
-						if (!winDragging) return;
-
-						dragWin.style.position = "fixed";
-						dragWin.style.left = `${e.clientX - xOffset}px`;
-						dragWin.style.top = `${e.clientY - yOffset}px`;
-					});
-
-					document.addEventListener("mouseup", (e)=>{
-						if (winDragging){
-							winDragging = false;
-							document.body.style.userSelect = "";
-						}
-					});
-				});
-				
-				
-			</script>
-		</div>
-	</div>
-
-	<div id="mobile-layout">
-		<div id="topbar">
-				<p id="mobile-clock">
-					00:00
-				</p>
-		</div>
-		<section id="mobile-main-view">
-			<!-- Row 1 -->
-			<button class="app-icon" 
-			onclick="openApp('about', 'About Me')" 
-			id="mobile-about" style="
-			background-image: url('images/mobile-icons/m-about.png');"></button>
-			<button class="app-icon" 
-			onclick="openApp('gallery', 'Gallery')"
-			id="mobile-gallery" style="
-			background-image: url('images/mobile-icons/m-gallery.png');"></button>
-			<button class="app-icon"
-			onclick="openApp('projects', 'My Projects')"
-			id="mobile-projects" style="
-			background-image: url('images/mobile-icons/m-folder.png');"></button>
-			
-			<script>
-				function openApp(app, title){
-					var appTitle = document.getElementById("mobile-app-title");
-					var appPath = `mobile-content/${app}.html`;
-					var appWindow = document.getElementById("mobile-app-view");
-					var appContent = document.getElementById("mobile-app-content");
-					
-					document.getElementById("mobile-main-view").style.display = "none";
-					appContent.innerHTML = "Loading Application";
-					fetch(appPath).then(response => {
-						if(!response.ok){
-							throw new Error("HTTP Error");
-						}
-						return response.text();
-					}).then(html => {
-						appContent.innerHTML = html;
-						if (app === "gallery"){
-							loadMobileGalleryContent();
-						}
-					}).catch(err =>{
-						appContent.innerHTML = "Unable to load application";
-						console.error("Fetch Error", err);
-					});
-
-					appTitle.innerHTML = title;
-					appWindow.style.display = "flex";
-				}
-			</script>
-		</section>
-		<div id="mobile-app-view">
-			<div id="mobile-app-header">
-				<button id="mobile-app-back"
-				onclick="closeApp()">&LeftAngleBracket;</button>
-				<h1 id="mobile-app-title">Application</h1>
-			</div>
-			<div id="mobile-app-content">
-				<p>
-					Loading app...
-				</p>
-			</div>
-			<script>
-				function closeApp(){
-					document.getElementById("mobile-main-view").style.display = "flex";
-					document.getElementById("mobile-app-view").style.display = "none";
-				}
-			</script>
-		</div>
-		<!-- <footer id="mobile-footer">
-			<img draggable="false" src="images/logo.png">
-		</footer> -->
-	</div>
 </html>
