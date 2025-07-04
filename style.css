@@ -18,6 +18,22 @@
 
 	--heading-font: main;
 	--primary-font: main;
+
+	--default-radius: 15px;
+}
+
+a{
+	color: var(--secondary-colour);
+	font-weight: bold;
+}
+
+a:hover{
+	color: var(--accent-highlight);
+	text-decoration: 1px double underline;
+}
+
+a:visited{
+	color: var(--secondary-colour);
 }
 
 body{
@@ -25,6 +41,52 @@ body{
 	margin: 0;
 	font-family: main;
 	overflow-x: hidden;
+	background-color: var(--background-colour);
+}
+
+button{
+	background-color: var(--accent-glass);
+	backdrop-filter: blur(15px);
+	color: var(--secondary-colour);
+	border: none;
+	padding: 5px;
+	border-radius: 5px;
+	text-transform: uppercase;
+}
+
+button:hover{
+	background-color: var(--accent-highlight);
+	cursor: pointer;
+}
+
+button:active{
+	background-color: var(--accent-colour);
+}
+
+footer{
+	background-color: var(--accent-colour);
+	color: var(--secondary-colour);
+	text-align: center;
+	height: 30px;
+	display: flex;
+	gap: 5px;
+	align-items: center;
+	justify-content: center;
+	user-select: none;
+}
+
+footer a{
+	text-transform: uppercase;
+	text-decoration: 1px solid underline;
+	font-weight: lighter;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-left: 1px solid var(--secondary-colour);
+}
+
+footer a:hover{
+	color: var(--secondary-colour);
+	text-decoration: 1px double underline;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -46,7 +108,7 @@ h1, h2, h3, h4, h5, h6{
 	overflow: hidden;
 	list-style-type: none;
 	color: var(--secondary-colour);
-	border-bottom-left-radius: 15px;
+	border-bottom-left-radius: var(--default-radius);
 }
 
 #navigation-bar li{
@@ -87,18 +149,115 @@ h1, h2, h3, h4, h5, h6{
 	backdrop-filter: blur(15px);
 	font-weight: bold;
 	text-transform: uppercase;
-	padding-left: 50px;
+	padding-left: 60px;
 	padding-right: 25px;
 	font-size: 46px;
-	border-bottom-right-radius: 15px;
+	border-bottom-right-radius: var(--default-radius);
 }
 
 #second-section{
 	min-height: 50vh;
 	margin-top: 5px;
-	background-image: url("images/startbanner.png");
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	background-image: url('images/start-bg.png');
+	background-position-y: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+#second-section div{
+	min-width: 50vw;
+	width: 50vw;
+	min-height: 48vh;
+	text-align: center;
+	color: var(--secondary-colour);
+	background-color: var(--overlay-background);
+	backdrop-filter: blur(15px);
+	border-bottom-left-radius: var(--default-radius);
+	border-bottom-right-radius: var(--default-radius);
+}
+
+#second-section div h1{
+	text-transform: uppercase;
+	width: 100%;
+	margin: 0;
+	color: var(--primary-colour);
+	background-color: var(--background-colour);
+}
+
+#article-date{
+	margin: 0;
+	text-align: right;
+	margin-left: auto;
+	min-height: 20px;
+	width: fit-content;
+	text-transform: uppercase;
+	user-select: none;
+	padding-right: 10px;
+	padding-left: 10px;
+	font-size: 12px;
+	background-color: var(--background-colour);
+	color: var(--primary-colour);
+	border-bottom-left-radius: var(--default-radius);
+}
+
+#featured-projects-section{
+	min-height: 70vh;
+	min-width: 100vw;
+	margin-top: 5px;
+	background-image: url('images/placeholder-intro.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+#project-section-title{
+	background-color: var(--background-colour);
+	width: fit-content;
+	text-transform: uppercase;
+	padding-left: 60px;
+	padding-right: 10px;
+	color: var(--primary-colour);
+	border-bottom-right-radius: var(--default-radius);
+}
+
+#project-list{
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	flex-direction: row;
+	min-width: 100vw;
+	min-height: 60vh;
+}
+
+#project-list div{
+	background-color: var(--accent-glass);
+	backdrop-filter: blur(15px);
+	min-width: 25vw;
+	margin: 0;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	color: var(--secondary-colour);
+}
+
+#project-list div h1{
+	margin: 0;
+	text-transform: uppercase;
+}
+
+#project-one{
+	border-top-left-radius: var(--default-radius);
+	border-bottom-left-radius: var(--default-radius);
+}
+
+#project-three{
+	border-top-right-radius: var(--default-radius);
+	border-bottom-right-radius: var(--default-radius);
 }
 
 @font-face{
