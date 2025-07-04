@@ -73,6 +73,9 @@ footer{
 	align-items: center;
 	justify-content: center;
 	user-select: none;
+	position: static;
+	width: 100vw;
+	bottom: 0;
 }
 
 footer a{
@@ -93,6 +96,14 @@ h1, h2, h3, h4, h5, h6{
 	font-family: main;
 	font-weight: lighter;
 	user-select: none;
+}
+
+#current{
+	background-color: var(--accent-highlight);
+}
+
+#current:hover{
+	text-decoration: none;
 }
 
 #navigation-bar{
@@ -131,6 +142,8 @@ h1, h2, h3, h4, h5, h6{
 	text-decoration: solid underline;
 }
 
+/* Index Content */
+
 #first-section{
 	background-image: url("images/intro.png");
 	background-size: cover;
@@ -159,6 +172,7 @@ h1, h2, h3, h4, h5, h6{
 #second-section{
 	min-height: 50vh;
 	margin-top: 5px;
+	margin-bottom: 0;
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
@@ -220,6 +234,7 @@ h1, h2, h3, h4, h5, h6{
 	text-transform: uppercase;
 	padding-left: 60px;
 	padding-right: 10px;
+	margin-top: 0;
 	color: var(--primary-colour);
 	border-bottom-right-radius: var(--default-radius);
 }
@@ -260,6 +275,92 @@ h1, h2, h3, h4, h5, h6{
 	border-top-right-radius: var(--default-radius);
 	border-bottom-right-radius: var(--default-radius);
 }
+
+/* About Content */
+#about-start-section{
+	background-image: url("images/about-bg.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-y: center;
+	color: var(--secondary-colour);
+	display: flex;
+	justify-content: left;
+	align-items: flex-end;
+	min-width: 100vw;
+	width: 100vw;
+	min-height: 40vh;
+	height: 40vh;
+}
+
+#about-start-section h1{
+	background-color: var(--background-colour);
+	color: var(--primary-colour);
+	margin: 0;
+	padding-left: 60px;
+	padding-right: 20px;
+	text-transform: uppercase;
+	font-size: 36px;
+	border-top-right-radius: var(--default-radius);
+}
+
+#about-content-section{
+	display: flex;
+	flex-direction: row;
+	margin-left: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#about-content-section h2, #about-content-section p{
+	margin: 0;
+}
+
+#about-content-section h2{
+	font-weight: bold;
+	text-decoration: solid underline var(--accent-colour);
+	margin-top: 20px;
+}
+
+#about-content-section h3{
+	text-decoration: double underline;
+	margin: 0;
+	margin-top: 20px;
+}
+
+#about-content-section ul{
+	margin: 0;
+}
+
+#about-content-section div{
+	padding-left: 10px;
+}
+
+#about-content-section a{
+	color: var(--accent-colour);
+}
+
+#about-content-left{
+	width: 220px;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+#about-content-left img{
+	width: 200px;
+	border-radius: 100%;
+}
+
+#about-content-right{
+	padding-top: 10px;
+}
+
+#about-content-right h1{
+	font-size: 72px;
+	text-transform: uppercase;
+	text-decoration: 2px solid underline var(--accent-colour);
+}
+
 
 @font-face{
     font-family: main;
