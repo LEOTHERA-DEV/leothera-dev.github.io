@@ -406,6 +406,63 @@ h1, h2, h3, h4, h5, h6{
 	cursor: pointer;
 }
 
+/* Projects Content */
+#project-start-section{
+	min-height: 40vh;
+	background-image: url('images/start-bg.png');
+	background-size: cover;
+	background-position-y: center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: left;
+	align-items: flex-end;
+	min-width: 100vw;
+	width: 100vw;
+}
+
+#project-start-section h1{
+	background-color: var(--background-colour);
+	padding-left: 60px;
+	padding-right: 20px;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	border-top-right-radius: var(--default-radius);
+}
+
+#project-content-section{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
+
+#project-content-section h1{
+	font-size: 48px;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	text-decoration: solid underline var(--accent-colour);
+}
+
+#project-content-section img{
+	min-height: 30vh;
+	max-height: 30vh;
+	min-width: 60vw;
+	max-width: 60vw;
+}
+
+#project-content-section p{
+	width: 60vw;
+	border-bottom: 1px solid var(--accent-colour);
+	padding-bottom: 10px;
+}
+
+#project-content-section u{
+	text-decoration: solid underline var(--accent-colour);
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
 @font-face{
     font-family: main;
     src: url("fonts/Montserrat-Regular.ttf");
