@@ -22,6 +22,7 @@
 	--default-radius: 15px;
 }
 
+
 a{
 	color: var(--secondary-colour);
 	font-weight: bold;
@@ -150,8 +151,9 @@ h1, h2, h3, h4, h5, h6{
 	background-repeat: no-repeat;
 	color: var(--secondary-colour);
 	display: flex;
-	justify-content: left;
-	align-items: flex-end;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	min-width: 100vw;
 	width: 100vw;
 	min-height: 100vh;
@@ -159,21 +161,25 @@ h1, h2, h3, h4, h5, h6{
 }
 
 #first-section h1{
-	background-color: var(--overlay-background);
-	backdrop-filter: blur(15px);
 	font-weight: bold;
 	text-transform: uppercase;
-	padding-left: 60px;
-	padding-right: 25px;
-	font-size: 46px;
-	border-bottom-right-radius: var(--default-radius);
+	font-size: 24px;
+	transform: translateY(-10vh);
+}
+
+#first-section img{
+	min-width: 60vw;
+	max-width: 60vw;
+	user-select: none;
 }
 
 #second-section{
 	min-height: 50vh;
+	min-width: 100vw;
 	margin-top: 5px;
 	margin-bottom: 0;
 	display: flex;
+	gap: 10px;
 	justify-content: center;
 	align-items: flex-start;
 	background-image: url('images/start-bg.png');
@@ -183,8 +189,9 @@ h1, h2, h3, h4, h5, h6{
 }
 
 #second-section div{
-	min-width: 50vw;
-	width: 50vw;
+	min-width: 38vw;
+	width: 38vw;
+	max-width: 38vw;
 	min-height: 48vh;
 	text-align: center;
 	color: var(--secondary-colour);
@@ -222,7 +229,7 @@ h1, h2, h3, h4, h5, h6{
 	min-height: 70vh;
 	min-width: 100vw;
 	margin-top: 5px;
-	background-image: url('images/placeholder-intro.png');
+	background-image: url('images/featured-bg.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -276,8 +283,8 @@ h1, h2, h3, h4, h5, h6{
 	text-align: center;
 	min-height: 40px;
 	padding-top: 5px;
-	background-color: var(--background-colour);
-	color: var(--primary-colour);
+	background-color: var(--overlay-background);
+	backdrop-filter: blur(15px);
 	width: 100%;
 }
 
@@ -492,9 +499,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 #project-content-section img{
-	min-height: 30vh;
 	max-height: 30vh;
-	min-width: 60vw;
 	max-width: 60vw;
 }
 
