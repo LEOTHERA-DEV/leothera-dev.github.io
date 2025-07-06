@@ -252,6 +252,7 @@ h1, h2, h3, h4, h5, h6{
 	background-color: var(--accent-glass);
 	backdrop-filter: blur(15px);
 	min-width: 25vw;
+	max-width: 25vw;
 	margin: 0;
 	overflow: hidden;
 	display: flex;
@@ -263,17 +264,43 @@ h1, h2, h3, h4, h5, h6{
 
 #project-list div h1{
 	margin: 0;
+	width: 100%;
+	text-align: center;
 	text-transform: uppercase;
+	background-color: var(--overlay-background);
+	backdrop-filter: blur(15px);
+}
+
+#project-list div p{
+	margin: 0;
+	text-align: center;
+	min-height: 40px;
+	padding-top: 5px;
+	background-color: var(--background-colour);
+	color: var(--primary-colour);
+	width: 100%;
 }
 
 #project-one{
 	border-top-left-radius: var(--default-radius);
 	border-bottom-left-radius: var(--default-radius);
+	background-image: url('images/project-0.png');
+	background-size: cover;
+	background-position-y: center;
+}
+
+#project-two{
+	background-image: url('images/project-1.png');
+	background-size: cover;
+	background-position-y: center;
 }
 
 #project-three{
 	border-top-right-radius: var(--default-radius);
 	border-bottom-right-radius: var(--default-radius);
+	background-image: url('images/project-2.png');
+	background-size: cover;
+	background-position-y: center;
 }
 
 /* About Content */
@@ -364,7 +391,7 @@ h1, h2, h3, h4, h5, h6{
 /* Gallery Content */
 #gallery-start-section{
 	min-height: 40vh;
-	background-image: url('images/placeholder-intro.png');
+	background-image: url('images/gallery-bg.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position-y: center;
@@ -391,19 +418,39 @@ h1, h2, h3, h4, h5, h6{
 	justify-content: center;
 	gap: 10px;
 	margin: 10px;
+	user-select: none;
 }
 
 #gallery-content-section img{
-	min-width: 30vw;
-	width: 30vw;
 	min-height: 30vh;
 	height: 30vh;
+	max-height: 30vh;
 	filter: brightness(70%) blur(1px);
 }
 
 #gallery-content-section img:hover{
 	filter: brightness(100%);
 	cursor: pointer;
+}
+
+#gallery-overlay{
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	min-width: 100vw;
+	min-height: 100vh;
+	background-color: var(--overlay-background);
+	backdrop-filter: blur(15px);
+}
+
+#gallery-overlay img{
+	min-height: 90vh;
+	max-height: 90vh;
+	max-width: 95vw;
 }
 
 /* Projects Content */

@@ -6,9 +6,35 @@
         </title>
         <link rel="icon" type="image/png" href="../images/icon.png">
         <link rel="stylesheet" href="../style.css">
+    
+        <script>
+            function loadImages(){
+                var contentSection = document.getElementById("gallery-content-section");
+                const count = 10;
+                for (i = 0; i < count; i++){
+                    var path = `../images/gallery/${i}.png`;
+                    let image = document.createElement('img');
+                    image.src = path;
+                    image.draggable = false;
+                    image.setAttribute("onclick", `previewImage(${i})`);
+                    contentSection.appendChild(image);
+                }
+            }
+
+            function previewImage(id){
+                var path = `../images/gallery/${id}.png`;
+                var overlayImg = document.getElementById("image-preview");
+                overlayImg.src = path;
+                document.getElementById("gallery-overlay").style.display = "flex";
+            }
+
+            function hideOverlay(){
+                document.getElementById("gallery-overlay").style.display = 'none';
+            }
+        </script>
     </head>
 
-    <body>
+    <body oncontextmenu="return false;" onload="loadImages()">
         <ul id="navigation-bar">
             <li><a href="../."><img draggable="false" src="../images/logo.png" height="24px"></a></li>
             <li><a href="about">About</a></li>
@@ -19,22 +45,11 @@
             <h1>Gallery</h1>
         </section>
         <section id="gallery-content-section">
-            <img src="../images/placeholder-intro.png">
-            <img src="../images/placeholder-intro.png">
-            <img src="../images/placeholder-intro.png">
-
-            <img src="../images/placeholder-intro.png">
-            <img src="../images/placeholder-intro.png">
-            <img src="../images/placeholder-intro.png">
-
-            <img src="../images/placeholder-intro.png">
-            <img src="../images/placeholder-intro.png">
-            <img src="../images/placeholder-intro.png">
-
-            <img src="../images/placeholder-intro.png">
-            <img src="../images/placeholder-intro.png">
-            <img src="../images/placeholder-intro.png">
         </section>
+
+        <div id="gallery-overlay" onclick="hideOverlay()">
+            <img draggable="false" id="image-preview" src="../images/placeholder-intro.png">
+        </div>
         <footer>
 		    &copy; LEOTHERA. All rights reserved.
 	    </footer>
