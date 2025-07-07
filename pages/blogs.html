@@ -9,7 +9,14 @@
 
         <script>
             function setBlogList(){
-                const count = 2;
+                const count = 0;
+                if (count === 0){
+                    var blogList = document.getElementById("blogs-content-section");
+                    var blankHeader = document.createElement("H1");
+                    blankHeader.id = "nothing";
+                    blankHeader.innerHTML = "Nothing here, for now";
+                    blogList.appendChild(blankHeader);
+                }
                 for(let i = count-1; i >= 0; i --){
                     var postPath = `../blogs/${i}.json`;
                     var blogList = document.getElementById("blogs-content-section");
@@ -68,6 +75,9 @@
     </head>
 
     <body onload="setBlogList()" oncontextmenu="return false;">
+        <div id="mobile-placeholder">
+		    <h1>Mobile layout is in the works (Again)</h1>
+	    </div>
         <ul id="navigation-bar">
             <li><a href="../."><img draggable="false" src="../images/logo.png" height="24px"></a></li>
             <li><a href="about">About</a></li>

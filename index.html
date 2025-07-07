@@ -17,9 +17,42 @@
 
 	<meta name="description" content="I'm Leothera. I make art, games and write code.">
 	
+	<script>
+		function setBlogHighlights(a, b){
+			var postPath = `../blogs/${a}.json`;
+                fetch(postPath)
+                .then(response => {
+                    if (!response.ok){
+                        throw new Error(`HTTP Error: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById("article-one-title").innerText = data.title;
+                    document.getElementById("article-one-date").innerHTML = data.date;
+                    document.getElementById("article-one-text").innerHTML = data.highlight;
+                })
+			var postPath = `../blogs/${b}.json`;
+                fetch(postPath)
+                .then(response => {
+                    if (!response.ok){
+                        throw new Error(`HTTP Error: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById("article-two-title").innerText = data.title;
+                    document.getElementById("article-two-date").innerHTML = data.date;
+                    document.getElementById("article-two-text").innerHTML = data.highlight;
+                })
+		}
+	</script>
 </head>
 
 <body>
+	<div id="mobile-placeholder">
+		<h1>Mobile layout is in the works (Again)</h1>
+	</div>
 	<ul id="navigation-bar">
 		<li><a id="current"><img draggable="false" src="images/logo.png" height="24px"></a></li>
 		<li><a href="pages/about">About</a></li>
@@ -31,34 +64,43 @@
 		<img draggable="false" src="images/header-img.png">
 		<h1>Digital Artist | Game Developer | Programmer</h1>
 	</section>
-	<section id="second-section">
-		<div>
-			<h1 id="article-title">Heading</h1>
-			<p id="article-date">01 January 2025</p>
-			<p id="article-text">Lorem Ipsum, some random text...</p>
-			<a href="">Read More Link</a>
+	<!-- <section id="second-section">
+		<div id="article-one">
+			<h1 id="article-one-title">Heading</h1>
+			<p id="article-one-date">01 January 2025</p>
+			<p id="article-one-text">Lorem Ipsum, some random text...</p>
+			<a>Read More</a>
 		</div>
-		<div>
-			<h1 id="article-title">Heading</h1>
-			<p id="article-date">01 January 2025</p>
-			<p id="article-text">Lorem Ipsum, some random text...</p>
-			<a href="">Read More Link</a>
+		<div id="article-two">
+			<h1 id="article-two-title">Heading</h1>
+			<p id="article-two-date">01 January 2025</p>
+			<p id="article-two-text">Lorem Ipsum, some random text...</p>
+			<a>Read More</a>
 		</div>
-	</section>
+	</section> -->
 	<section id="featured-projects-section">
 		<h1 id="project-section-title">Featured Projects</h1>
 		<div id="project-list">
 			<div id="project-one">
 				<h1>Axolus Cafe</h1>
-				<p>A cozy cafe simulator set in space.</p>
+				<p>
+					<a>3D</a> <a>Game</a> <a>Godot</a>
+				<br><br>July 2025 - Present
+				</p>
 			</div>
 			<div id="project-two">
 				<h1>Leonis Toolkit</h1>
-				<p>A collection of game development tools.</p>
+				<p>
+					<a>Game Dev</a> <a>Various tools</a>
+				<br><br>September 2024 - Present
+				</p>
 			</div>
 			<div id="project-three">
 				<h1>Vihltara</h1>
-				<p>A first person role playing game.</p>
+				<p>
+					<a>3D</a> <a>Game</a> <a>Godot</a>
+				<br><br>June 2025 - Present
+				</p>
 			</div>
 		</div>
 	</section>
