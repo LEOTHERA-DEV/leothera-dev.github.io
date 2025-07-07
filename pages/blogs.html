@@ -8,8 +8,58 @@
         <link rel="stylesheet" href="../style.css">
 
         <script>
+            function setBlogList(){
+                const count = 2;
+                for(let i = 0; i < count; i ++){
+                    var postPath = `../blogs/${i}.json`;
+                    var blogList = document.getElementById("blogs-content-section");
+                    fetch(postPath)
+                    .then(response => {
+                        if (!response.ok){
+                            throw new Error(`HTTP Error: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        var container = document.createElement("section");
+                        var listImage = document.createElement("img");
+                        listImage.src = data.image;
+                        listImage.draggable = false;
+                        var listItemPreview = document.createElement("div");
+                        container.setAttribute("onclick", `loadPost(${i})`);
+                        var listTitle = document.createElement("h1");
+                        listTitle.innerHTML = data.title;
+                        var listSummary = document.createElement("p")
+                        listSummary.innerHTML = data.subtext;
+                        blogList.appendChild(container);
+                        container.appendChild(listImage);
+                        container.appendChild(listItemPreview);
+                        listItemPreview.appendChild(listTitle);
+                        listItemPreview.appendChild(listSummary);
+                    })
+                }
+            }
+
             function openBlog(){
                 document.getElementById("blog-overlay").style.display = "flex";
+            }
+            function loadPost(id){
+                var postPath = `../blogs/${id}.json`;
+                fetch(postPath)
+                .then(response => {
+                    if (!response.ok){
+                        throw new Error(`HTTP Error: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById("blog-image").src = data.image;
+                    document.getElementById("blog-title").innerText = data.title;
+                    document.getElementById("blog-date").innerHTML = data.date;
+                    document.getElementById("blog-paragraph").innerHTML = data.content;
+                })
+
+                openBlog();
             }
             function closeBlog(){
                 document.getElementById("blog-overlay").style.display = "none";
@@ -17,7 +67,7 @@
         </script>
     </head>
 
-    <body>
+    <body onload="setBlogList()">
         <ul id="navigation-bar">
             <li><a href="../."><img draggable="false" src="../images/logo.png" height="24px"></a></li>
             <li><a href="about">About</a></li>
@@ -29,51 +79,15 @@
             <h1>Blogs</h1>
         </section>
         <section id="blogs-content-section">
-            <section>
-                <img src="../images/placeholder-intro.png">
-                <div onclick="openBlog()">
-                    <h1>Blog Title</h1>
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-            </section>
-            <section>
-                <img src="../images/placeholder-intro.png">
-                <div>
-                    <h1>Blog Title</h1>
-                    <p>Blog summary with all the text and all that.</p>
-                </div>
-            </section>
-            <section>
-                <img src="../images/placeholder-intro.png">
-                <div>
-                    <h1>Blog Title</h1>
-                    <p>Blog summary with all the text and all that.</p>
-                </div>
-            </section>
-            <section>
-                <img src="../images/placeholder-intro.png">
-                <div>
-                    <h1>Blog Title</h1>
-                    <p>Blog summary with all the text and all that.</p>
-                </div>
-            </section>
+
         </section>
 
         <div id="blog-overlay" onclick="closeBlog()">
             <div id="blog-post">
-                <img src="../images/placeholder-intro.png">
-                <h1>Blog Title</h1>
-                <h2>01 January 1970</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <img id="blog-image" src="../images/placeholder-intro.png">
+                <h1 id="blog-title"></h1>
+                <h2 id="blog-date"></h2>
+                <p id="blog-paragraph">
                 </p>
             </div>
         </div>
