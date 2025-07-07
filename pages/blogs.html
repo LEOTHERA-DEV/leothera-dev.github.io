@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Leothera | Blogs
+        </title>
+        <link rel="icon" type="image/png" href="../images/icon.png">
+        <link rel="stylesheet" href="../style.css">
+
+        <script>
+            function openBlog(){
+                document.getElementById("blog-overlay").style.display = "flex";
+            }
+            function closeBlog(){
+                document.getElementById("blog-overlay").style.display = "none";
+            }
+        </script>
+    </head>
+
+    <body>
+        <ul id="navigation-bar">
+            <li><a href="../."><img draggable="false" src="../images/logo.png" height="24px"></a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="gallery">Gallery</a></li>
+            <li><a href="projects">Projects</a></li>
+            <li><a id="current">Blogs</a></li>
+	    </ul>
+        <section id="blogs-start-section">
+            <h1>Blogs</h1>
+        </section>
+        <section id="blogs-content-section">
+            <section>
+                <img src="../images/placeholder-intro.png">
+                <div onclick="openBlog()">
+                    <h1>Blog Title</h1>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <img src="../images/placeholder-intro.png">
+                <div>
+                    <h1>Blog Title</h1>
+                    <p>Blog summary with all the text and all that.</p>
+                </div>
+            </section>
+            <section>
+                <img src="../images/placeholder-intro.png">
+                <div>
+                    <h1>Blog Title</h1>
+                    <p>Blog summary with all the text and all that.</p>
+                </div>
+            </section>
+            <section>
+                <img src="../images/placeholder-intro.png">
+                <div>
+                    <h1>Blog Title</h1>
+                    <p>Blog summary with all the text and all that.</p>
+                </div>
+            </section>
+        </section>
+
+        <div id="blog-overlay" onclick="closeBlog()">
+            <div id="blog-post">
+                <img src="../images/placeholder-intro.png">
+                <h1>Blog Title</h1>
+                <h2>01 January 1970</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+        <footer>
+		    &copy; LEOTHERA. All rights reserved.
+	    </footer>
+    </body>
+</html>
