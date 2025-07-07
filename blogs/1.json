@@ -1,8 +1,8 @@
 {
-    "title":"NUMBAH 2",
-    "date":"07 July 2025",
-    "category":"test",
-    "image":"../images/start-bg.png",
-    "subtext":"This here is another set of text, right",
-    "content":"If this text is visible, <br> everything is working perfectly again!"
+    "title":"Some Leothera Lore",
+    "date":"09 July 2025",
+    "category":"Self",
+    "image":"../images/blogs/history.png",
+    "subtext":"A long and mostly detailed look at my history as an artist and developer.",
+    "content":""
 }

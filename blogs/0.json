@@ -1,8 +1,8 @@
 {
-    "title":"THIS IS A TITLE",
+    "title":"Hullooo, World",
     "date":"07 July 2025",
-    "category":"test",
-    "image":"../images/placeholder-intro.png",
-    "subtext":"This here is the text that will be in the blog list",
-    "content":"If this text is visible, everything is working perfectly"
+    "category":"Self",
+    "image":"../images/blogs/welcome.png",
+    "subtext":"A quick introduction about this page and some stuff to expect here.",
+    "content":""
 }
