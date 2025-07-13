@@ -16,13 +16,14 @@
 	<link rel="stylesheet" href="style.css">
 
 	<meta name="description" content="I'm Leothera. I make art, games and write code.">
-
+	<script src="script.js"></script>
 <body>
-	<div id="mobile-placeholder">
-		<h1>Mobile layout is in the works (Again)</h1>
-	</div>
+	<button onclick="loadNavBar()" id="mobile-menu-button">
+		<img src="images/logo.png">
+	</button>
 	<ul id="navigation-bar">
-		<li><a id="current"><img draggable="false" src="images/logo.png" height="24px"></a></li>
+		<li id="pc-home"><a id="current"><img draggable="false" src="images/logo.png" height="24px"></a></li>
+		<li id="mobile-home"><a id="current">Home</a></li>
 		<li><a href="pages/about">About</a></li>
 		<li><a href="pages/gallery">Gallery</a></li>
 		<li><a href="pages/projects">Projects</a></li>

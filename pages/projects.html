@@ -7,14 +7,16 @@
         </title>
         <link rel="icon" type="image/png" href="../images/icon.png">
         <link rel="stylesheet" href="../style.css">
+        <script src="../script.js"></script>
     </head>
 
     <body oncontextmenu="return false;">
-        <div id="mobile-placeholder">
-		    <h1>Mobile layout is in the works (Again)</h1>
-	    </div>
+        <button onclick="loadNavBar()" id="mobile-menu-button">
+		    <img src="../images/logo.png">
+	    </button>
         <ul id="navigation-bar">
-            <li><a href="../."><img draggable="false" src="../images/logo.png" height="24px"></a></li>
+            <li id="pc-home"><a href="../."><img draggable="false" src="../images/logo.png" height="24px"></a></li>
+            <li id="mobile-home"><a href="../.">Home</a></li>
             <li><a href="about">About</a></li>
             <li><a href="gallery">Gallery</a></li>
             <li><a id="current">Projects</a></li>

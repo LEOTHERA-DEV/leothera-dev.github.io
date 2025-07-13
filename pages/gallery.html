@@ -6,40 +6,17 @@
         </title>
         <link rel="icon" type="image/png" href="../images/icon.png">
         <link rel="stylesheet" href="../style.css">
-    
-        <script>
-            function loadImages(){
-                var contentSection = document.getElementById("gallery-content-section");
-                const count = 13;
-                for (i = 0; i < count; i++){
-                    var path = `../images/gallery/${i}.png`;
-                    let image = document.createElement('img');
-                    image.src = path;
-                    image.draggable = false;
-                    image.setAttribute("onclick", `previewImage(${i})`);
-                    contentSection.appendChild(image);
-                }
-            }
 
-            function previewImage(id){
-                var path = `../images/gallery/${id}.png`;
-                var overlayImg = document.getElementById("image-preview");
-                overlayImg.src = path;
-                document.getElementById("gallery-overlay").style.display = "flex";
-            }
-
-            function hideOverlay(){
-                document.getElementById("gallery-overlay").style.display = 'none';
-            }
-        </script>
+        <script src="../script.js"></script>
     </head>
 
     <body oncontextmenu="return false;" onload="loadImages()">
-        <div id="mobile-placeholder">
-		    <h1>Mobile layout is in the works (Again)</h1>
-	    </div>
+        <button onclick="loadNavBar()" id="mobile-menu-button">
+	    	<img src="../images/logo.png">
+    	</button>
         <ul id="navigation-bar">
-            <li><a href="../."><img draggable="false" src="../images/logo.png" height="24px"></a></li>
+            <li id="pc-home"><a href="../."><img draggable="false" src="../images/logo.png" height="24px"></a></li>
+            <li id="mobile-home"><a href="../.">Home</a></li>
             <li><a href="about">About</a></li>
             <li><a id="current">Gallery</a></li>
             <li><a href="projects">Projects</a></li>
