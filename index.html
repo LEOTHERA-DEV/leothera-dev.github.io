@@ -16,38 +16,6 @@
 	<link rel="stylesheet" href="style.css">
 
 	<meta name="description" content="I'm Leothera. I make art, games and write code.">
-	
-	<script>
-		function setBlogHighlights(a, b){
-			var postPath = `../blogs/${a}.json`;
-                fetch(postPath)
-                .then(response => {
-                    if (!response.ok){
-                        throw new Error(`HTTP Error: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    document.getElementById("article-one-title").innerText = data.title;
-                    document.getElementById("article-one-date").innerHTML = data.date;
-                    document.getElementById("article-one-text").innerHTML = data.highlight;
-                })
-			var postPath = `../blogs/${b}.json`;
-                fetch(postPath)
-                .then(response => {
-                    if (!response.ok){
-                        throw new Error(`HTTP Error: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    document.getElementById("article-two-title").innerText = data.title;
-                    document.getElementById("article-two-date").innerHTML = data.date;
-                    document.getElementById("article-two-text").innerHTML = data.highlight;
-                })
-		}
-	</script>
-</head>
 
 <body>
 	<div id="mobile-placeholder">
@@ -58,26 +26,13 @@
 		<li><a href="pages/about">About</a></li>
 		<li><a href="pages/gallery">Gallery</a></li>
 		<li><a href="pages/projects">Projects</a></li>
-		<li><a href="pages/blogs">Blogs</a></li>
 	</ul>
 	<section id="first-section">
 		<img draggable="false" src="images/header-img.png">
 		<h1>Digital Artist | Game Developer | Programmer</h1>
 	</section>
-	<!-- <section id="second-section">
-		<div id="article-one">
-			<h1 id="article-one-title">Heading</h1>
-			<p id="article-one-date">01 January 2025</p>
-			<p id="article-one-text">Lorem Ipsum, some random text...</p>
-			<a>Read More</a>
-		</div>
-		<div id="article-two">
-			<h1 id="article-two-title">Heading</h1>
-			<p id="article-two-date">01 January 2025</p>
-			<p id="article-two-text">Lorem Ipsum, some random text...</p>
-			<a>Read More</a>
-		</div>
-	</section> -->
+	<section id="second-section">
+	</section>
 	<section id="featured-projects-section">
 		<h1 id="project-section-title">Featured Projects</h1>
 		<div id="project-list">

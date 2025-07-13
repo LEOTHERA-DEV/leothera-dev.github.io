@@ -214,6 +214,7 @@ h1, h2, h3, h4, h5, h6{
 	width: 38vw;
 	max-width: 38vw;
 	min-height: 48vh;
+	height: 48vh;
 	text-align: center;
 	color: var(--secondary-colour);
 	background-color: var(--overlay-background);
@@ -230,6 +231,24 @@ h1, h2, h3, h4, h5, h6{
 	background-color: var(--background-colour);
 }
 
+#article-one-img{
+	min-height: 32vh;
+	max-height: 32vh;
+	margin: 0;
+	width: 38vw;
+}
+
+#article-two-img{
+	min-height: 38vh;
+	max-height: 38vh;
+	margin: 0;
+	width: 38vw;
+}
+
+#article-one-text, #article-two-text{
+	margin: 3px;
+}
+
 #second-section a{
 	color: var(--secondary-colour);
 	text-decoration: solid underline;
@@ -242,7 +261,9 @@ h1, h2, h3, h4, h5, h6{
 
 #article-one-date, #article-two-date{
 	margin: 0;
+	z-index: 3;
 	text-align: right;
+	float: right;
 	margin-left: auto;
 	min-height: 20px;
 	width: fit-content;
@@ -662,6 +683,7 @@ h1, h2, h3, h4, h5, h6{
 	z-index: 3;
 	background-color: var(--overlay-background);
 	backdrop-filter: blur(15px);
+	animation: fade-in 1s;
 }
 
 #blog-post{
@@ -672,6 +694,7 @@ h1, h2, h3, h4, h5, h6{
 	overflow-y: scroll;
 	overflow-x: hidden;
 	background-color: var(--background-colour);
+	animation: page-in 1s;
 }
 
 #blog-post::-webkit-scrollbar{
@@ -725,6 +748,12 @@ h1, h2, h3, h4, h5, h6{
 @keyframes fade-in {
 	0%{opacity: 0%;}
 	100%{opacity: 100%;}
+}
+
+@keyframes page-in {
+	0%{transform: translateY(100vh);}
+	100%{transform: translateY(0vh);}
+	
 }
 
 @media (max-width: 1080px){
