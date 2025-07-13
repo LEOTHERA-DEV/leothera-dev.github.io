@@ -154,6 +154,10 @@ h1, h2, h3, h4, h5, h6{
 	float: left;
 }
 
+#mobile-menu-button{
+	display: none;
+}
+
 #navigation-bar a{
 	color: var(--secondary-colour);
 	font-size: 18px;
