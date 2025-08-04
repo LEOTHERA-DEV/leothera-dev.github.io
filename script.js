@@ -10,7 +10,7 @@ function loadNavBar(){
 
 function loadImages(){
     var contentSection = document.getElementById("gallery-content-section");
-    const count = 14;
+    const count = 15;
     for (i = 0; i < count; i++){
         var path = `../images/gallery/${i}.png`;
         let image = document.createElement('img');
