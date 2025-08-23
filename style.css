@@ -215,7 +215,7 @@ h1, h2, h3, h4, h5, h6{
 	gap: 10px;
 	justify-content: center;
 	align-items: flex-start;
-	background-image: url('images/gallery-bg.png');
+	background-image: url('images/teaser-banner.png');
 	background-position-y: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -855,7 +855,7 @@ h1, h2, h3, h4, h5, h6{
 	}
 
 	#second-section{
-		background-position-x: center;
+		background-position-x: left;
 	}
 	#featured-projects-section{
 		min-width: 100vw;
