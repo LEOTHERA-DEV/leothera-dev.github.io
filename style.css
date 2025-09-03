@@ -78,12 +78,14 @@ header img {
     padding: 10px;
     margin: auto;
 }
-#games-content h1 {
+#games-content h1,
+#software-content h1 {
     background-color: var(--secondary-accent);
     color: var(--secondary-text-colour);
     text-align: center;
 }
-#games-content img {
+#games-content img,
+#software-content img {
     margin: auto;
     /*width: 500px;*/
     max-width: 100%;
