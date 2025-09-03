@@ -6,6 +6,8 @@
     --primary-accent: #a079af;
     --secondary-accent: #c595d8;
     --selected: #7a5a86;
+    --document-background: #dddddd;
+    --document: #ffffff;
 }
 
 /* Elements */
@@ -67,6 +69,26 @@ header img {
     gap: 5px;
 }
 
+#about-content,
+#games-content,
+#software-content {
+    min-width: 40vw;
+    max-width: 50vw;
+    background-color: var(--document);
+    padding: 10px;
+    margin: auto;
+}
+#games-content h1 {
+    background-color: var(--secondary-accent);
+    color: var(--secondary-text-colour);
+    text-align: center;
+}
+#games-content img {
+    margin: auto;
+    /*width: 500px;*/
+    max-width: 100%;
+}
+
 #left-section {
     width: 25vw;
     background-color: var(--primary-accent);
@@ -109,8 +131,11 @@ header img {
 
 #links-section {
     background-color: var(--secondary-accent);
+    position: sticky;
+    top: 0;
     padding: 10px 0px;
     width: 100%;
+    z-index: 5;
 }
 #links-section a {
     min-width: 50px;
@@ -175,4 +200,8 @@ header img {
     margin: 0;
     color: var(--secondary-text-colour);
     background-color: var(--secondary-accent);
+}
+
+.unavailable {
+    display: none;
 }
