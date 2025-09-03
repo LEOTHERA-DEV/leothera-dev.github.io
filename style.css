@@ -131,3 +131,27 @@ header img{
 	width: 30%;
 	max-width: 20%;
 }
+
+
+.gallery-content{
+	width: 100%;
+	justify-content: center;
+	gap: 5px;
+	display: flex;
+	/* 	flex-wrap: wrap; */
+	overflow-x: auto;
+}
+.gallery-content img{
+	height: 200px;
+	filter: grayscale(60%);
+}
+.gallery-content img:hover{
+	filter: grayscale(0%);
+}
+
+.gallery-title{
+	width: 100%;
+	margin: 0;
+	color: var(--secondary-text-colour);
+	background-color: var(--secondary-accent);
+}
