@@ -190,7 +190,11 @@ header img {
     /* 	flex-wrap: wrap; */
     overflow-x: auto;
 }
+.gallery-content::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-accent);
+}
 .gallery-content img {
+    min-width: 100px;
     height: 200px;
     filter: grayscale(60%);
 }
