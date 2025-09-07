@@ -73,7 +73,7 @@ header img {
 #games-content,
 #software-content {
     min-width: 40vw;
-    max-width: 50vw;
+    max-width: 60vw;
     background-color: var(--document);
     padding: 10px;
     margin: auto;
@@ -211,4 +211,44 @@ header img {
 
 .unavailable {
     display: none;
+}
+
+@media (max-width: 1080px) {
+    footer {
+        position: fixed;
+        bottom: 0vh;
+        font-size: 32px;
+    }
+    header img {
+        width: 60%;
+    }
+    .article-image {
+        width: 60%;
+        max-width: 60%;
+        margin: auto;
+    }
+    #about-content,
+    #games-content,
+    #software-content {
+        margin-bottom: 50px;
+        font-size: 28px;
+        min-width: 90vw;
+        max-width: unset;
+        padding: unset;
+    }
+    #left-section {
+        display: none;
+    }
+    #links-section {
+        font-size: 32px;
+    }
+    #right-section {
+        margin-bottom: 50px;
+    }
+    #right-section div {
+        flex-direction: column;
+    }
+    #right-section p {
+        font-size: 28px;
+    }
 }
