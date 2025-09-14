@@ -4,7 +4,7 @@
     --secondary-text-colour: #ffffff;
     --header-footer-colour: #ff0000;
     --primary-accent: #a079af;
-    --secondary-accent: #c595d8;
+    --secondary-accent: #a079af;
     --selected: #7a5a86;
     --document-background: #dddddd;
     --document: #ffffff;
@@ -172,7 +172,7 @@ header img {
     padding-left: 10px;
     margin: 0;
     background-color: var(--secondary-accent);
-    color: var(--primary-text-colour);
+    color: var(--secondary-text-colour);
 }
 
 /* classes */
