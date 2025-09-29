@@ -1,20 +1,22 @@
 :root {
-    --background-colour: #ffffff;
+    --background-colour: #ede1ff;
     --primary-text-colour: #000000;
-    --secondary-text-colour: #ffffff;
+    --secondary-text-colour: #000000;
     --header-footer-colour: #ff0000;
-    --primary-accent: #a079af;
-    --secondary-accent: #a079af;
-    --selected: #7a5a86;
-    --document-background: #dddddd;
-    --document: #ffffff;
+    --primary-accent: #ede1ff;
+    --secondary-accent: #ede1ff;
+    --shadow-dark: #00000010;
+    --shadow-light: #efe7ff;
+    --selected: #e6e0ff;
+    --document-background: #ede1ff;
+    --document: #ede1ff;
 }
 
 /* Elements */
 body {
     background-color: var(--background-colour);
     color: var(--primary-text-colour);
-    font-family: sans-serif;
+    font-family: "Main Font";
     margin: 0;
 }
 footer {
@@ -24,8 +26,12 @@ footer {
     width: 100%;
     overflow-x: hidden;
     text-align: center;
+    box-shadow:
+        inset 2px 2px 3px var(--shadow-dark),
+        inset -2px -2px 3px var(--shadow-light);
 }
 header {
+    display: none;
     min-width: 100%;
     width: 100%;
     min-height: 20vh;
@@ -53,7 +59,6 @@ header img {
     margin: 0;
 }
 #about-content h2 {
-    background-color: var(--secondary-accent);
     color: var(--secondary-text-colour);
     margin: 10px 0;
 }
@@ -77,10 +82,13 @@ header img {
     background-color: var(--document);
     padding: 10px;
     margin: auto;
+    border-radius: 15px;
+    box-shadow:
+        4px 4px 5px var(--shadow-dark),
+        -4px -4px 5px var(--shadow-light);
 }
 #games-content h1,
 #software-content h1 {
-    background-color: var(--secondary-accent);
     color: var(--secondary-text-colour);
     text-align: center;
 }
@@ -96,7 +104,7 @@ header img {
     min-width: 18vw;
     background-color: var(--primary-accent);
     color: var(--secondary-text-colour);
-    font-weight: bold;
+    text-transform: uppercase;
     display: flex;
     gap: 5px;
     flex-direction: column;
@@ -112,24 +120,25 @@ header img {
     background-color: var(--primary-accent);
     color: var(--secondary-text-colour);
     text-decoration: none;
-    font-weight: bold;
-    border: 1px solid #000000;
-    border-top: 1px solid #ffffff;
-    border-left: 1px solid #ffffff;
+    border-radius: 5px;
+    box-shadow:
+        2px 2px 3px var(--shadow-dark),
+        -2px -2px 3px var(--shadow-light);
 }
 #left-section a:hover {
     background-color: var(--selected);
 }
 #left-section a:active {
-    border: 1px solid #ffffff;
-    border-top: 1px solid #000000;
-    border-left: 1px solid #000000;
+    box-shadow:
+        inset 2px 2px 3px var(--shadow-dark),
+        inset -2px -2px 3px var(--shadow-light);
 }
 #left-section img {
     width: 100%;
-    border: 1px solid #ffffff;
-    border-top: 1px solid #000000;
-    border-left: 1px solid #000000;
+    border-radius: 10px;
+    box-shadow:
+        2px 2px 3px var(--shadow-dark),
+        -2px -2px 3px var(--shadow-light);
 }
 
 #links-section {
@@ -139,21 +148,32 @@ header img {
     padding: 10px 0px;
     width: 100%;
     z-index: 5;
+    box-shadow: 0px 2px 3px var(--shadow-dark);
 }
 #links-section a {
     min-width: 50px;
+    text-transform: uppercase;
     padding: 5px;
+    margin: 5px;
     color: var(--secondary-text-colour);
-    border-right: 1px solid #000000;
     text-decoration: none;
-    font-weight: bold;
+    border-radius: 5px;
 }
 #links-section a:hover {
     text-decoration: solid underline;
+    background-color: var(--selected);
+    box-shadow:
+        inset 2px 2px 3px var(--shadow-dark),
+        inset -2px -2px 3px var(--shadow-light);
 }
 
 #right-section {
     overflow-x: hidden;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow:
+        inset 4px 4px 5px var(--shadow-dark),
+        inset -4px -4px 5px var(--shadow-light);
 }
 
 #right-section div {
@@ -163,15 +183,29 @@ header img {
     padding: 10px 0px;
 }
 
+#right-section div img {
+    max-width: 30%;
+    box-shadow: none;
+    filter: drop-shadow(4px 4px 5px var(--shadow-dark));
+}
+
+#right-section hr {
+    width: 90%;
+}
+
 #right-section img {
-    width: 100%;
+    width: 98%;
+    padding: 5px;
+    box-shadow:
+        4px 4px 5px var(--shadow-dark),
+        -4px -4px 5px var(--shadow-light);
+    border-radius: 10px;
 }
 
 #right-section h1 {
     width: 100%;
     padding-left: 10px;
     margin: 0;
-    background-color: var(--secondary-accent);
     color: var(--secondary-text-colour);
 }
 
@@ -211,6 +245,11 @@ header img {
 
 .unavailable {
     display: none;
+}
+
+@font-face {
+    font-family: "Main Font";
+    src: url("fonts/Montserrat-Regular.ttf");
 }
 
 @media (max-width: 1080px) {
