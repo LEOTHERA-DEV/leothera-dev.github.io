@@ -132,7 +132,6 @@ header img {
 }
 #left-section img {
     width: 100%;
-    border-top: 3px solid var(--border-colour);
 }
 
 #links-section {
