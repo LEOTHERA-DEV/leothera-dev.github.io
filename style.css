@@ -52,6 +52,9 @@ header img {
 table {
     border-collapse: collapse;
 }
+table a {
+    color: var(--primary-text-colour);
+}
 table th,
 td,
 tr {
