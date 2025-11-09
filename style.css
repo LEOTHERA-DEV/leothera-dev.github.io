@@ -103,6 +103,24 @@ td {
     padding: 10px;
     margin: auto;
 }
+
+#gallery-overlay {
+    background-color: var(--element-background-colour);
+    backdrop-filter: blur(5px);
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+}
+
+#image-preview {
+    margin: auto;
+    max-height: 90vh;
+    max-width: 90vw;
+}
+
 #games-content h1,
 #software-content h1 {
     color: var(--primary-text-colour);
@@ -293,12 +311,13 @@ td {
 }
 
 .gallery-content {
-    width: 100%;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
     justify-content: center;
     gap: 5px;
     display: flex;
-    /* 	flex-wrap: wrap; */
-    overflow-x: auto;
+    flex-wrap: wrap;
 }
 .gallery-content::-webkit-scrollbar-thumb {
     background-color: var(--secondary-accent);
@@ -380,5 +399,10 @@ td {
     }*/
     #right-section p {
         font-size: 28px;
+    }
+    .gallery-content img {
+        min-width: 400px;
+        height: 800px;
+        filter: grayscale(60%);
     }
 }

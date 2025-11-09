@@ -3,9 +3,10 @@
         <title>Leothera | Gallery</title>
         <link rel="icon" type="image/png" href="../images/icon.png" />
         <link rel="stylesheet" href="../style.css" />
+        <script src="../script.js"></script>
     </head>
 
-    <body>
+    <body onload="loadImages()">
         <header><img src="../images/header-img.png" /></header>
         <section id="links-section">
             <a href="..">Home</a><a href="../about">About</a
@@ -13,66 +14,13 @@
             ><a class="unavailable" href="../videos">Videos</a>
         </section>
         <section id="body-section" style="flex-direction: column">
-            <h2 class="gallery-title">2D Art</h2>
-            <div class="gallery-content">
-                <a href="images/2d-0.png" target="_blank">
-                    <img src="images/2d-0.png" />
-                </a>
-                <a href="images/2d-1.png" target="_blank">
-                    <img src="images/2d-1.png" />
-                </a>
-            </div>
-
-            <h2 class="gallery-title">3D Art</h2>
-            <div class="gallery-content">
-                <a href="images/3d-0.png" target="_blank">
-                    <img src="images/3d-0.png" />
-                </a>
-                <a href="images/3d-1.png" target="_blank">
-                    <img src="images/3d-1.png" />
-                </a>
-                <a href="images/3d-2.png" target="_blank">
-                    <img src="images/3d-2.png" />
-                </a>
-                <a href="images/3d-3.png" target="_blank">
-                    <img src="images/3d-3.png" />
-                </a>
-                <a href="images/3d-4.png" target="_blank">
-                    <img src="images/3d-4.png" />
-                </a>
-                <a href="images/3d-5.png" target="_blank">
-                    <img src="images/3d-5.png" />
-                </a>
-                <a href="images/3d-6.png" target="_blank">
-                    <img src="images/3d-6.png" />
-                </a>
-                <a href="images/3d-7.png" target="_blank">
-                    <img src="images/3d-7.png" />
-                </a>
-            </div>
-
-            <h2 class="gallery-title">Game Dev</h2>
-            <div class="gallery-content">
-                <a href="images/gd-0.png" target="_blank">
-                    <img src="images/gd-0.png" />
-                </a>
-                <a href="images/gd-1.png" target="_blank">
-                    <img src="images/gd-1.png" />
-                </a>
-                <a href="images/gd-2.png" target="_blank">
-                    <img src="images/gd-2.png" />
-                </a>
-                <a href="images/gd-3.png" target="_blank">
-                    <img src="images/gd-3.png" />
-                </a>
-                <a href="images/gd-4.png" target="_blank">
-                    <img src="images/gd-4.png" />
-                </a>
-                <a href="images/gd-5.png" target="_blank">
-                    <img src="images/gd-5.png" />
-                </a>
-            </div>
+            <h2 class="gallery-title">LEOTHERA'S GALLERY</h2>
+            <div class="gallery-content" id="gallery-content"></div>
         </section>
+
+        <div id="gallery-overlay" onclick="hideOverlay()">
+            <img id="image-preview" src="images/0.png" />
+        </div>
         <footer>&copy;2025. Leothera. All rights reserved.</footer>
     </body>
 </html>

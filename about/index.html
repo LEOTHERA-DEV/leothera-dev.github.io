@@ -3,9 +3,10 @@
         <title>Leothera | About</title>
         <link rel="icon" type="image/png" href="../images/icon.png" />
         <link rel="stylesheet" href="../style.css" />
+        <script src="../script.js"></script>
     </head>
 
-    <body>
+    <body onload="setAge(), setLocalTime()">
         <header><img src="../images/header-img.png" /></header>
         <section id="links-section">
             <a href="..">Home</a><a href="../gallery">Gallery</a
@@ -31,12 +32,19 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3"><b>DOB:</b><br />2002/08/04 | (23)</td>
+                        <td colspan="3">
+                            <b>DOB:</b><br />2002/08/04 | (<font id="age-string"
+                                >00</font
+                            >)
+                        </td>
                         <td><b>Gender:</b><br />???</td>
                     </tr>
                     <tr>
                         <td colspan="4">
-                            <b>Location:</b><br />South Africa, Earth
+                            <b>Location:</b><br />South Africa, Earth |
+                            <font id="timezone" title="Current time where I am"
+                                >(Loading time...)</font
+                            >
                         </td>
                         <td>
                             <b>Email:</b><br />
