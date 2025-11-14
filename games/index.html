@@ -3,9 +3,10 @@
         <title>Leothera | Games</title>
         <link rel="icon" type="image/png" href="../images/icon.png" />
         <link rel="stylesheet" href="../style.css" />
+	<script src="script.js"></script>
     </head>
 
-    <body>
+    <body onload="loadGameInfo()">
         <header><img src="../images/header-img.png" /></header>
         <section id="links-section">
             <a href="..">Home</a><a href="../about">About</a
@@ -48,59 +49,18 @@
                 </a>
             </div>
             <div id="games-content">
-                <h1>AXOLOTL 40</h1>
                 <img src="project_0.png" />
-                <p>
-                    <b>AXOLOTL 40</b> is a first person game inspired by various
-                    arcade games.
-                    <br />
-                    <br />Designed as an indirect sequel to
-                    <b>Project: Axolus</b>. <b>AXOLOTL 40</b> focuses on Earth's
-                    industrial giants as they put their new Mechs to the test in
-                    an interplanetary battle against alien races.
-                </p>
-                <h1 id="axolus">Project: Axolus</h1>
                 <img src="project_1.png" />
-                <p>
-                    A series of retro styled action role-playing games featuring
-                    gameplay mechanics inspired by older RPGs and MMOs.
-                    <br />The first game, simply named <b>Project: Axolus</b>,
-                    is set in an alternate solar system in which Saturn's
-                    remaining inhabitants begin a long term mission of
-                    retrieving lost relics across the galaxy. <br />A free demo
-                    will be available on itch.io soon.
-                </p>
-                <img src="project_1a.png" />
-
-                <h1>Project: Edith</h1>
                 <img src="project_3.png" />
-                <p>
-                    <b>Edith</b> (Working Title) is an first person narrative
-                    driven game with a darker tone and plot. The game aims to 
-		    explore various conditions such as anxiety, depression and
-		    gender dysphoria by being set in a world where the protagonist
-		    has to live a life in a world that never remains constant and
-		    is difficult to keep up with.
-		    <br>Unlike the other games I'm working on, this one combines 
-		    visual novel elements with an interactable world, giving you 
-		    complete freedom to explore various areas without being constrained 
-		    by the main story.
-		    <br>
-		    <br><b>Edith</b> currently does not have a release date.
-                </p>
-                <img src="project_3a.png" />
-
-                <h1>Vihltara</h1>
-                <img src="project_2.png" />
-                <p>
-                    An upcoming Role Playing Game that combines African Fantasy
-                    with unique sci-fi elements.
-                    <br />
-                    <br />The game is set in a world going through a series of
-                    events caused by beings from an unknown realm.
-                </p>
-                <img src="project_2a.png" />
+               	<img src="project_2.png" />
             </div>
+	    <div id="game-info-overlay">
+		<div id="game-info-content">
+			<h1 id="game-title">GAME TITLE</h1>
+			<p id="game-description">Game information will go here along with screenshots and all that...
+			</p>
+		</div>
+	    </div>
         </section>
         <footer>&copy;2025. Leothera. All rights reserved.</footer>
     </body>

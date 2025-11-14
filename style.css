@@ -104,7 +104,7 @@ td {
     margin: auto;
 }
 
-#gallery-overlay {
+#gallery-overlay, #game-info-overlay {
     background-color: var(--element-background-colour);
     backdrop-filter: blur(5px);
     display: none;
@@ -112,7 +112,20 @@ td {
     height: 100vh;
     position: fixed;
     top: 0;
+    margin: 0;
     z-index: 9;
+}
+
+#game-info-overlay{
+	min-width: 100vw;
+}
+
+#game-info-content{
+	margin: auto;
+	min-width: 60vw;
+	width: 60vw;
+	min-height: 95vh;
+	max-height: 95vh;
 }
 
 #image-preview {
@@ -131,6 +144,12 @@ td {
     margin: auto;
     /*width: 500px;*/
     max-width: 100%;
+}
+
+#games-content img:hover{
+	border-left: 2px solid var(--border-colour);
+	background-color: #eddbad50;
+	cursor: pointer;
 }
 
 #key-list {
