@@ -1,6 +1,6 @@
 :root {
-    --background-colour: #2c2532;
-    --element-background-colour: #00000050;
+    --background-colour: #070409;
+    --element-background-colour: #00000000;
     --primary-text-colour: #ffffff;
     --secondary-text-colour: #000000;
     --selected-text-colour: #000000;
@@ -14,6 +14,7 @@
     --selected: #e2bf7d;
     --border-colour: #fceead;
     --border-selected-colour: #c3924f;
+    --secondary-border-colour: #55ccdd;
     --document-background: #ede1ff;
     --document: #ede1ff;
 }
@@ -22,31 +23,35 @@
 body {
     background-color: var(--background-colour);
     color: var(--primary-text-colour);
+    text-shadow: 0px 0px 3px var(--primary-text-colour);
     font-family: "Main Font";
     margin: 0;
 }
 footer {
     background: var(--element-background-colour);
+    font-family: "Button Font";
     color: var(--primary-text-colour);
     padding: 10px 0px;
     text-transform: uppercase;
     width: 100%;
     overflow-x: hidden;
     text-align: center;
+    border-top: 1px solid var(--primary-text-colour);
+    box-shadow: 0px 0px 3px var(--primary-text-colour);
     backdrop-filter: blur(20px);
 }
 header {
     min-width: 100%;
     width: 100%;
     min-height: 20vh;
+    display: flex;
+    place-items: center;
+    align-items: center;
     color: var(--secondary-text-colour);
-    background-color: var(--primary-accent);
-    background-image: url("images/start-bg.png");
-    background-size: cover;
-    background-position-y: center;
-    background-position-x: right;
+    background-color: var(--element-background-colour);
 }
 header img {
+    margin: auto;
     width: 30%;
 }
 table {
@@ -71,10 +76,15 @@ td {
     display: flex;
     flex-direction: column;
 }
+#about-content b {
+    font-family: "Button Font";
+}
 #about-content h1 {
     font-size: 48px;
     text-transform: uppercase;
+    font-family: "Button Font";
     text-align: center;
+    text-shadow: 0px 0px 3px var(--primary-text-colour);
     margin: 0;
 }
 #about-content h2 {
@@ -85,6 +95,10 @@ td {
 #about-content h3,
 #about-content ul {
     margin: 0;
+}
+
+#about-content th {
+    font-family: "Button Font";
 }
 
 #body-section {
@@ -104,7 +118,8 @@ td {
     margin: auto;
 }
 
-#gallery-overlay, #game-info-overlay {
+#gallery-overlay,
+#game-info-overlay {
     background-color: var(--element-background-colour);
     backdrop-filter: blur(5px);
     display: none;
@@ -116,16 +131,16 @@ td {
     z-index: 9;
 }
 
-#game-info-overlay{
-	min-width: 100vw;
+#game-info-overlay {
+    min-width: 100vw;
 }
 
-#game-info-content{
-	margin: auto;
-	min-width: 60vw;
-	width: 60vw;
-	min-height: 95vh;
-	max-height: 95vh;
+#game-info-content {
+    margin: auto;
+    min-width: 60vw;
+    width: 60vw;
+    min-height: 95vh;
+    max-height: 95vh;
 }
 
 #image-preview {
@@ -146,10 +161,10 @@ td {
     max-width: 100%;
 }
 
-#games-content img:hover{
-	border-left: 2px solid var(--border-colour);
-	background-color: #eddbad50;
-	cursor: pointer;
+#games-content img:hover {
+    border-left: 2px solid var(--border-colour);
+    background-color: #eddbad50;
+    cursor: pointer;
 }
 
 #key-list {
@@ -159,8 +174,11 @@ td {
 #left-section {
     width: 18vw;
     min-width: 18vw;
+    font-family: "Button Font";
+    font-size: 24px;
     background-color: var(--background-colour);
     color: var(--primary-text-colour);
+    text-shadow: 0px 0px 3px var(--primary-text-colour);
     text-transform: uppercase;
     display: flex;
     gap: 5px;
@@ -171,21 +189,26 @@ td {
 
 #left-section a {
     min-width: 100%;
-    margin: 0;
     text-align: center;
+    margin: 3px;
     width: 100%;
-    background-color: var(--element-background-colour);
     color: var(--primary-text-colour);
-    border-left: 3px solid var(--border-colour);
+    border: 1px solid var(--secondary-border-colour);
     text-decoration: none;
+    text-shadow: 0px 0px 3px var(--primary-text-colour);
+    box-shadow: 0px 0px 3px var(--secondary-border-colour);
+    transition: 0.3s;
 }
 #left-section a:hover {
-    background-color: var(--highlighted);
-    color: var(--selected-text-colour);
-    border-left: 3px solid var(--border-selected-colour);
+    margin: 1px;
+    padding: 2px;
+    color: var(--secondary-border-colour);
+    text-shadow: 0px 0px 3px var(--secondary-border-colour);
+    transition: 0.3s;
 }
 #left-section a:active {
     background-color: var(--selected);
+    color: var(--selected-text-colour);
 }
 #left-section img {
     width: 100%;
@@ -195,25 +218,37 @@ td {
     background-color: var(--element-background-colour);
     backdrop-filter: blur(20px);
     position: sticky;
+    border-top: 1px solid var(--secondary-accent);
+    border-bottom: 1px solid var(--secondary-accent);
     top: 0;
     padding: 3px 0px;
     height: max-content;
     width: 100%;
     z-index: 5;
+    box-shadow: 0px 0px 3px var(--secondary-accent);
 }
 #links-section a {
     min-width: 50px;
+    font-family: "Button Font";
+    font-size: 24px;
     text-transform: uppercase;
     padding: 0px 5px;
     margin: 5px;
     color: var(--primary-text-colour);
-    border-left: 2px solid var(--border-colour);
+    border: 1px solid var(--secondary-accent);
     text-decoration: none;
+    transition: 0.3s;
+    text-shadow: 0px 0px 3px var(--secondary-accent);
+    box-shadow: 0px 0px 3px var(--secondary-accent);
 }
 #links-section a:hover {
-    background-color: var(--highlighted);
-    color: var(--selected-text-colour);
-    border-left: 2px solid var(--border-selected-colour);
+    margin: 1px 5px;
+    padding: 4px 5px;
+    transition: 0.3s;
+}
+#links-section a:active {
+    background-color: var(--secondary-accent);
+    color: var(--secondary-text-colour);
 }
 
 #projects-content {
@@ -285,9 +320,14 @@ td {
 #right-section h1 {
     width: 100%;
     text-align: center;
-    margin: 0;
-    color: var(--primary-text-colour);
+    font-family: "Button Font";
+    margin: 10px 0;
+    padding: 5px 0;
+    color: var(--border-colour);
     text-transform: uppercase;
+    border-top: 1px solid var(--border-colour);
+    border-bottom: 1px solid var(--border-colour);
+    text-shadow: 0px 0px 3px var(--border-colour);
 }
 
 #text-transcript {
@@ -352,9 +392,11 @@ td {
 
 .gallery-title {
     width: 100%;
+    font-family: "Button Font";
     margin: 0;
-    color: var(--primary-text-colour);
+    color: var(--border-colour);
     border-bottom: 2px solid var(--border-colour);
+    text-shadow: 0px 0px 3px var(--border-colour);
 }
 .table-header {
     background-color: var(--element-background-colour);
@@ -379,6 +421,11 @@ td {
 @font-face {
     font-family: "Main Font";
     src: url("fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Button Font";
+    src: url("fonts/squareddisplay.ttf");
 }
 
 @media (max-width: 1080px) {
