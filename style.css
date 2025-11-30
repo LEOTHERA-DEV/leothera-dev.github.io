@@ -48,10 +48,11 @@ header {
     place-items: center;
     align-items: center;
     color: var(--secondary-text-colour);
+    background-image: url("images/start-bg.png");
+    background-size: cover;
     background-color: var(--element-background-colour);
 }
 header img {
-    margin: auto;
     width: 30%;
 }
 table {
@@ -382,12 +383,29 @@ td {
     background-color: var(--secondary-accent);
 }
 .gallery-content img {
-    min-width: 100px;
-    height: 200px;
+    margin: 5px;
+    padding: 0px;
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 230px;
+    max-height: 230px;
+    border: 1px solid var(--border-colour);
+    border-bottom: 30px solid var(--border-colour);
+    box-shadow: 0px 0px 3px var(--border-colour);
     filter: grayscale(60%);
+    transition: 0.3s;
 }
 .gallery-content img:hover {
+    cursor: pointer;
+    margin: 1px;
+    padding: 4px;
     filter: grayscale(0%);
+    min-height: 255px;
+    max-height: 255px;
+    border: 1px solid var(--secondary-border-colour);
+    border-bottom: 5px solid var(--secondary-border-colour);
+    box-shadow: 0px 0px 3px var(--secondary-border-colour);
+    transition: 0.3s;
 }
 
 .gallery-title {
