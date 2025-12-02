@@ -3,7 +3,7 @@
         <title>Leothera | Games</title>
         <link rel="icon" type="image/png" href="../images/icon.png" />
         <link rel="stylesheet" href="../style.css" />
-	<script src="script.js"></script>
+        <script src="script.js"></script>
     </head>
 
     <body onload="loadGameInfo()">
@@ -18,50 +18,41 @@
                 id="left-section"
                 style="background: none; color: var(--primary-text-colour)"
             >
-                Playable Games:
-                <a
-                    href="https://leothera.itch.io/sphe-the-game"
-                    style="padding: 2px"
-                    ><img
-                        src="https://img.itch.zone/aW1nLzE4MjY1MjIzLnBuZw==/315x250%23c/cIQayb.png"
-                        style="border: none"
-                /></a>
-                <a
-                    href="https://leothera.itch.io/tetraheaven"
-                    style="padding: 2px"
-                    ><img
-                        src="https://img.itch.zone/aW1nLzE3NTMzMjYzLnBuZw==/315x250%23c/23uUcL.png"
-                        style="border: none"
-                /></a>
-                <a
-                    href="https://leothera.itch.io/vihltara-demo-one"
-                    style="padding: 2px"
-                >
-                    <img
-                        src="https://img.itch.zone/aW1nLzc4ODI3NTAucG5n/315x250%23c/RgVKzV.png"
-                        style="border: none"
-                    />
-                </a>
-                <hr width="100%" />
                 Upcoming Games
                 <a style="padding: 2px">
                     <img src="cover-axolus.png" />
                 </a>
             </div>
             <div id="games-content">
-                <img src="project_0.png" />
-                <img src="project_1.png" />
-                <img src="project_3.png" />
-               	<img src="project_2.png" />
+                <div class="game-container">
+                    <img src="project_0.png" />
+                    <p>AXOLOTL 40</p>
+                </div>
+                <div class="game-container">
+                    <img src="project_1.png" />
+                    <p>Axolus</p>
+                </div>
+                <div class="game-container">
+                    <img src="project_3.png" />
+                    <p>Edith</p>
+                </div>
+                <div class="game-container">
+                    <img src="project_2.png" />
+                    <p>Vihltara</p>
+                </div>
             </div>
-	    <div id="game-info-overlay">
-		<div id="game-info-content">
-			<h1 id="game-title">GAME TITLE</h1>
-			<p id="game-description">Game information will go here along with screenshots and all that...
-			</p>
-		</div>
-	    </div>
+            <div id="game-info-overlay">
+                <div id="game-info-content">
+                    <h1 id="game-title">GAME TITLE</h1>
+                    <p id="game-description">
+                        Game information will go here along with screenshots and
+                        all that...
+                    </p>
+                </div>
+            </div>
         </section>
-        <footer>&copy;2025. Leothera. All rights reserved.</footer>
+        <footer style="position: absolute; bottom: 0">
+            &copy;2025. Leothera. All rights reserved.
+        </footer>
     </body>
 </html>

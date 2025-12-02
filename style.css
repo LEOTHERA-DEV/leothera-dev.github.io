@@ -1,6 +1,6 @@
 :root {
     --background-colour: #070409;
-    --element-background-colour: #00000000;
+    --element-background-colour: #07040950;
     --primary-text-colour: #ffffff;
     --secondary-text-colour: #000000;
     --selected-text-colour: #000000;
@@ -32,6 +32,8 @@ footer {
     font-family: "Button Font";
     color: var(--primary-text-colour);
     padding: 10px 0px;
+    position: sticky;
+    bottom: 0;
     text-transform: uppercase;
     width: 100%;
     overflow-x: hidden;
@@ -139,12 +141,61 @@ td {
     background-color: var(--element-background-colour);
     backdrop-filter: blur(5px);
     display: none;
+    max-width: 100vw;
     width: 100vw;
+    max-height: 100vh;
     height: 100vh;
     position: fixed;
     top: 0;
     margin: 0;
     z-index: 9;
+}
+
+#gallery-overlay {
+    border-top: 2px solid var(--border-colour);
+    border-bottom: 2px solid var(--border-colour);
+    box-shadow: inset 0px 0px 3px var(--border-colour);
+}
+
+#gallery-overlay h1 {
+    background-color: var(--border-colour);
+    color: var(--secondary-text-colour);
+    border: 2px solid var(--border-colour);
+    border-top: none;
+    text-shadow: none;
+    box-shadow:
+        0px 0px 3px var(--border-colour),
+        inset 0px 0px 3px var(--border-colour);
+    position: absolute;
+    font-family: "Button Font";
+    padding: 0 10px;
+    margin: 0;
+    font-size: 32px;
+    top: 0;
+    left: 0;
+}
+#gallery-overlay h2 {
+    background-color: var(--border-colour);
+    color: var(--secondary-text-colour);
+    border: 2px solid var(--border-colour);
+    border-top: none;
+    text-shadow: none;
+    box-shadow:
+        0px 0px 3px var(--border-colour),
+        inset 0px 0px 3px var(--border-colour);
+    position: absolute;
+    font-family: "Button Font";
+    padding: 0 10px;
+    margin: 0;
+    font-size: 32px;
+    bottom: 0;
+    right: 0;
+}
+
+#games-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #game-info-overlay {
@@ -163,24 +214,23 @@ td {
     margin: auto;
     max-height: 90vh;
     max-width: 90vw;
+    border: 2px solid var(--secondary-border-colour);
+    box-shadow:
+        0px 0px 3px var(--secondary-border-colour),
+        inset 0px 0px 3px var(--secondary-border-colour);
+    padding: 10px;
+    animation: load-image 0.3s;
+    transition: 0.3s;
 }
 
-#games-content h1,
 #software-content h1 {
     color: var(--primary-text-colour);
     text-align: center;
 }
-#games-content img,
 #software-content img {
     margin: auto;
     /*width: 500px;*/
     max-width: 100%;
-}
-
-#games-content img:hover {
-    border-left: 2px solid var(--border-colour);
-    background-color: #eddbad50;
-    cursor: pointer;
 }
 
 #key-list {
@@ -439,6 +489,40 @@ td {
     border-bottom: 2px solid var(--border-colour);
     text-shadow: 0px 0px 3px var(--border-colour);
 }
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 200px;
+    max-width: 200px;
+    max-height: 120px;
+    min-height: 120px;
+    border: 1px solid var(--border-colour);
+    margin: 10px;
+    padding: 0;
+    box-shadow:
+        0px 0px 3px var(--border-colour),
+        inset 0px 0px 3px var(--border-colour);
+    transition: 0.3s;
+}
+.game-container:hover {
+    margin: 6px;
+    padding: 4px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.game-container img {
+    width: 180px;
+    margin: 0;
+}
+.game-container p {
+    background-color: var(--border-colour);
+    color: var(--secondary-text-colour);
+    text-align: center;
+    font-family: "Button Font";
+    font-size: 24px;
+    margin: 0;
+}
 .table-header {
     background-color: var(--element-background-colour);
     font-size: 18px;
@@ -467,6 +551,20 @@ td {
 @font-face {
     font-family: "Button Font";
     src: url("fonts/squareddisplay.ttf");
+}
+
+@keyframes load-image {
+    0% {
+        padding: 0;
+        max-width: 10vw;
+    }
+    75% {
+        padding: 0px;
+        max-width: 90vw;
+    }
+    100% {
+        padding: 10px;
+    }
 }
 
 @media (max-width: 1080px) {
