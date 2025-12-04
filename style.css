@@ -205,6 +205,8 @@ td {
     position: absolute;
     top: 0;
     left: 0;
+    padding: 0;
+    margin: 0;
     min-width: 100vw;
     min-height: 100vh;
     background-color: var(--element-background-colour);
@@ -216,8 +218,10 @@ td {
 }
 
 #game-info-container div {
-    max-width: 90vw;
-    margin: 10vh;
+    max-width: 60vw;
+    height: 80vh;
+    max-height: 80vh;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -225,7 +229,6 @@ td {
     box-shadow:
         0px 0px 3px var(--border-colour),
         inset 0px 0px 3px var(--border-colour);
-    overflow: hidden;
     animation: load-game-overlay 0.6s;
 }
 
@@ -253,6 +256,10 @@ td {
     color: var(--border-colour);
     box-shadow: 0px 0px 3px var(--border-colour);
     margin-bottom: 5px;
+}
+
+#game-info-container p {
+    width: 88%;
 }
 
 #game-info-content {
@@ -545,6 +552,7 @@ td {
 .game-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     min-width: 200px;
     max-width: 200px;
@@ -563,6 +571,11 @@ td {
     padding: 4px;
     transition: 0.3s;
     cursor: pointer;
+    border: 1px solid var(--secondary-border-colour);
+    box-shadow: 0px 0px 3px var(--secondary-border-colour);
+}
+.game-container:active {
+    background-color: var(--secondary-border-colour);
 }
 .game-container img {
     width: 180px;
@@ -572,6 +585,7 @@ td {
     background-color: var(--border-colour);
     color: var(--secondary-text-colour);
     text-align: center;
+    width: 100%;
     font-family: "Button Font";
     font-size: 24px;
     margin: 0;
@@ -624,11 +638,20 @@ td {
     0% {
         max-width: 0vw;
     }
-    50% {
-        max-width: 0vw;
+    75% {
+        max-width: 60vw;
+        padding: 10px;
+        border: 1px solid var(--secondary-border-colour);
+        box-shadow:
+            0px 0px 3px var(--secondary-border-colour),
+            inset 0px 0px 3px var(--secondary-border-colour);
     }
     100% {
-        max-width: 90vw;
+        padding: 0px;
+        border: 1px solid var(--border-colour);
+        box-shadow:
+            0px 0px 3px var(--border-colour),
+            inset 0px 0px 3px var(--border-colour);
     }
 }
 
