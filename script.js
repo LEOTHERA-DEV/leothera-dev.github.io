@@ -51,8 +51,19 @@ function hideOverlay() {
 }
 
 function displayGameOverlay(id) {
-  let gameData = loadGameInfo();
-  console.log(gameData[id]);
+  fetch("info.json")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      document.getElementById("game-title-slot").innerText = data[id]["title"];
+      document.getElementById("game-image-slot-1").src = data[id]["image-1"];
+      document.getElementById("game-description-slot-1").innerText =
+        data[id]["info-1"];
+      document.getElementById("game-image-slot-2").src = data[id]["image-2"];
+      document.getElementById("game-description-slot-2").innerText =
+        data[id]["info-2"];
+    })
+    .catch((error) => console.error("Unable to load game information."));
   // This will handle displaying the selected game's information.
   // For now, it'll just toggle the overlay's visibility
   document.getElementById("game-info-container").style.display = "flex";
@@ -60,16 +71,6 @@ function displayGameOverlay(id) {
 
 function hideGameOverlay() {
   document.getElementById("game-info-container").style.display = "none";
-}
-
-function loadGameInfo() {
-  fetch("info.json")
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      return data;
-    })
-    .catch((error) => console.error("Unable to load game information."));
 }
 
 setLocalTime();
