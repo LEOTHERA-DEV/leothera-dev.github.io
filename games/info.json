@@ -1,12 +1,30 @@
 {
-	"0":{
-		"title":"AXOLOTL 40",
-		"release":"TBD",
-		"info":"AXOLOTL 40 is a first person action RPG in which you operate one of Earth's most advanced humanoid mecha."
-	},
-	"1":{
-		"title":"Axolus",
-		"release":"2026",
-		"info":"Axolus is a space RPG inspired by a small range of retro MMORPGs."
-	}
+  "0": {
+    "title": "AXOLOTL 40",
+    "image-1": "project_0.png",
+    "image-2": "project_0.png",
+    "info-1": "AXOLOTL 40 is a first person action RPG in which you operate one of Earth's most advanced humanoid mecha.",
+    "info-2": "Lorem Ipsum"
+  },
+  "1": {
+    "title": "Axolus",
+    "image-1": "project_1.png",
+    "image-2": "project_1.png",
+    "info-1": "So, what is Axolus?",
+    "info-2": "Lorem Ipsum"
+  },
+  "2": {
+    "title": "Edith",
+    "image-1": "project_2.png",
+    "image-2": "project_2a.png",
+    "info-1": "Something about Edith.",
+    "info-2": "Lorem Ipsum"
+  },
+  "3": {
+    "title": "Vihltara",
+    "image-1": "project_3.png",
+    "image-2": "project_3a.png",
+    "info-1": "Something about Vihltara.",
+    "info-2": "Lorem Ipsum"
+  }
 }

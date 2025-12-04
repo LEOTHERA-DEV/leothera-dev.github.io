@@ -3,10 +3,10 @@
         <title>Leothera | Games</title>
         <link rel="icon" type="image/png" href="../images/icon.png" />
         <link rel="stylesheet" href="../style.css" />
-        <script src="script.js"></script>
+        <script src="../script.js"></script>
     </head>
 
-    <body onload="loadGameInfo()">
+    <body>
         <header><img src="../images/header-img.png" /></header>
         <section id="links-section">
             <a href="..">Home</a><a href="../about">About</a
@@ -24,19 +24,19 @@
                 </a>
             </div>
             <div id="games-content">
-                <div class="game-container">
+                <div class="game-container" onclick="displayGameOverlay(0)">
                     <img src="project_0.png" />
                     <p>AXOLOTL 40</p>
                 </div>
-                <div class="game-container">
+                <div class="game-container" onclick="displayGameOverlay(1)">
                     <img src="project_1.png" />
                     <p>Axolus</p>
                 </div>
-                <div class="game-container">
+                <div class="game-container" onclick="displayGameOverlay(2)">
                     <img src="project_3.png" />
                     <p>Edith</p>
                 </div>
-                <div class="game-container">
+                <div class="game-container" onclick="displayGameOverlay(3)">
                     <img src="project_2.png" />
                     <p>Vihltara</p>
                 </div>
@@ -52,13 +52,14 @@
             </div>
         </section>
 
-        <div id="game-info-container">
+        <div id="game-info-container" onclick="hideGameOverlay()">
             <div>
                 <h1 id="game-title-slot">Game Title</h1>
                 <img id="game-image-slot-1" src="project_1.png" />
                 <p id="game-description-slot-1">
                     An introductory description of the game.
                 </p>
+                <hr width="90%" />
                 <img id="game-image-slot-2" src="project_1a.png" />
                 <p id="game-description-slot-2">
                     More information will continue here along with

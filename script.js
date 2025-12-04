@@ -50,10 +50,26 @@ function hideOverlay() {
   document.getElementById("gallery-overlay").style.display = "none";
 }
 
-function displayGame(id) {
+function displayGameOverlay(id) {
+  let gameData = loadGameInfo();
+  console.log(gameData[id]);
   // This will handle displaying the selected game's information.
-  // TODO
-  return;
+  // For now, it'll just toggle the overlay's visibility
+  document.getElementById("game-info-container").style.display = "flex";
+}
+
+function hideGameOverlay() {
+  document.getElementById("game-info-container").style.display = "none";
+}
+
+function loadGameInfo() {
+  fetch("info.json")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      return data;
+    })
+    .catch((error) => console.error("Unable to load game information."));
 }
 
 setLocalTime();

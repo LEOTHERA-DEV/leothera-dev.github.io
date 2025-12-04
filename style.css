@@ -210,7 +210,7 @@ td {
     background-color: var(--element-background-colour);
     backdrop-filter: blur(15px);
     z-index: 90;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -225,6 +225,7 @@ td {
     box-shadow:
         0px 0px 3px var(--border-colour),
         inset 0px 0px 3px var(--border-colour);
+    animation: load-game-overlay 0.3s;
 }
 
 #game-info-container div img {
@@ -240,8 +241,16 @@ td {
     padding: 10px 0;
     color: var(--border-colour);
     text-shadow: 0px 0px 3px var(--border-colour);
-    box-shadow: 0px 0px 3px var(--border-colour);
+    box-shadow:
+        0px 0px 3px var(--border-colour),
+        inset 0px 0px 3px var(--border-colour);
     border-bottom: 1px solid var(--border-colour);
+}
+
+#game-info-container hr {
+    color: var(--border-colour);
+    box-shadow: 0px 0px 3px var(--border-colour);
+    margin-bottom: 5px;
 }
 
 #game-info-content {
@@ -606,6 +615,15 @@ td {
     }
     100% {
         padding: 10px;
+    }
+}
+
+@keyframes load-game-overlay {
+    0% {
+        max-width: 0vw;
+    }
+    100% {
+        max-width: 90vw;
     }
 }
 
