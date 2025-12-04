@@ -229,7 +229,7 @@ td {
     box-shadow:
         0px 0px 3px var(--border-colour),
         inset 0px 0px 3px var(--border-colour);
-    animation: load-game-overlay 0.6s;
+    animation: load-game-overlay 0.4s;
 }
 
 #game-info-container div img {
@@ -636,18 +636,25 @@ td {
 
 @keyframes load-game-overlay {
     0% {
+        filter: opacity(0%);
+        opacity: 0%;
         max-width: 0vw;
     }
     75% {
-        max-width: 60vw;
+        filter: opacity(0%);
+        opacity: 0%;
         padding: 10px;
+        max-width: 0vw;
         border: 1px solid var(--secondary-border-colour);
         box-shadow:
             0px 0px 3px var(--secondary-border-colour),
             inset 0px 0px 3px var(--secondary-border-colour);
     }
     100% {
+        filter: opacity(100%);
+        opacity: 100%;
         padding: 0px;
+        max-width: 60vw;
         border: 1px solid var(--border-colour);
         box-shadow:
             0px 0px 3px var(--border-colour),
