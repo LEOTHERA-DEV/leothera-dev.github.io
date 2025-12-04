@@ -50,5 +50,11 @@ function hideOverlay() {
   document.getElementById("gallery-overlay").style.display = "none";
 }
 
+function displayGame(id) {
+  // This will handle displaying the selected game's information.
+  // TODO
+  return;
+}
+
 setLocalTime();
 setInterval(setLocalTime, 1000);
