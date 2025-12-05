@@ -228,6 +228,8 @@ td {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--element-background-colour);
+    backdrop-filter: brightness(0%);
     border: 1px solid var(--border-colour);
     box-shadow:
         0px 0px 3px var(--border-colour),

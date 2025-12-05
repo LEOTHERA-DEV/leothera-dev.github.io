@@ -3,28 +3,28 @@
     "title": "4X0LOTL",
     "image-1": "project_0.png",
     "image-2": "project_0a.png",
-    "info-1": "4X0LOTL (Axolotl 40) is a first person action RPG in which you operate one of Earth's most advanced humanoid mech: The AX-40.",
-    "info-2": "More information will be available once development begins (After Axolus)."
+    "info-1": "4X0LOTL (Axolotl 40) is a first person action RPG in which you operate one of Earth's most advanced humanoid mech. It is set in the same universe as Axolus, with the main plot being set several decades later.",
+    "info-2": "The game was originaly designed as a third person space shooter before I came up with the concept of being able to operate large machines and experiencing it from the perspective of the pilots.\n\nThe AX-40 will be your assigned mech, featuring cutting edge technology that allows it to operate on land, underwater and even in space. It was built by a small and relatively new manufactoring company, with most of its features being inspired by one of the founder's favourite Earth critters. The timing of this unique machine's completion couldn't be more perfect as Earth is now at risk of being attacked by their former allies and the Solar System's biggest threat.\n\nDevelopment will only begin after Axolus is released."
   },
   "1": {
     "title": "Axolus",
     "image-1": "project_1.png",
     "image-2": "project_1a.png",
-    "info-1": "Axolus is a retro-inspired role playing game that features game mechanics inspired by classic MMORPGs.",
-    "info-2": "You play as one of Saturn's intergalactic explorers on a long term mission to retrieve ancient artifacts before they end up in the wrong hands."
+    "info-1": "Axolus is a retro-inspired role playing game set in an alternate Solar System.",
+    "info-2": "The game started off as a short term project that I would work on for about a month and release for free. Axolus was planned to be a simple cafe simulator set in space and you would host customisable cafes and invite friends to hang out in and enjoy the space scenery.\nAfter writing up most of the game's lore, it felt best to go for a different type of game that would allow for more of the world's story to be told.\n\nThe game is now more like an old school MMORPG, in which you will complete quests to progress through the story. This approach allowed me to create a modular system that will allow me to add new content that would follow the intended formula but still introduce a unique gameplay experience (it also lets me release updates as if it really was a MMO).\n\nYou play as an Axoli, an alien race from a twin planet that later became Saturn. Many believed the Axoli were extinct due to their inactivity for many centuries before realising they had already anticipated their home worlds' destruction and left the Solar System temporarily. A large number of research material and ancient artifacts were scattered across the Milky Way galaxy and the Axoli are now doing everything they can to retrieve everything before potential enemies discover and utilise them.\nPlayers can expect encounters with a wide range of alien races, who can often be potential allies or enemies.\n\nA demo version of the game will be available in early to mid 2026 on itch.io, with a full release by the end of the year, hopefully."
   },
   "2": {
     "title": "Edith",
     "image-1": "project_3.png",
     "image-2": "project_3a.png",
-    "info-1": "Edith (Working Title) is a first person game that combines visual novel elements with an interactable world.",
-    "info-2": ""
+    "info-1": "Project: Edith (Working Title) is a first person game that combines visual novel elements with an interactable world.",
+    "info-2": "I originally wanted this one to be an animated series but felt that it would work better as a game as it can give players the freedom to experience the main story in whichever way they see fit.\nThe game focuses on themes of one's identity as well as how people can see the same things differently.\n\nThe protagonist, Edith, shows very severe signs of detachment from her reality and has a hard time maintaining a consistent perception of it, which greatly affects her emotional state and the way she interacts with those around her. Project: Edith aims to be a more mature and expressive game and takes a lot of inspiration from personal experiences.\n\nThe game will hopefully be released in 2026."
   },
   "3": {
     "title": "Vihltara",
     "image-1": "project_2.png",
     "image-2": "project_2a.png",
-    "info-1": "Something about Vihltara.",
-    "info-2": "Lorem Ipsum"
+    "info-1": "Vihltara is an Action RPG which combines African Fantasy with some Science Fiction.",
+    "info-2": "Vihltara is the first game I worked on with the intend to complete and release. During the early stages of development, it was more of a sandbox world that allowed me to try out various ideas and improve my game development and programming skills.\n\nVihltara has also served as the foundation for many systems and tools I've made to use in other future projects.\n\nThe game is set in the fictional kingdom of Rusana, which mostly features traditional African inspired designs. The world feels more like a simulation to the player due to it having diegetic interfaces that other characters are aware of and can interact with. Due to how dynamic the world is designed, players may have very different experiences as their actions will influence the main story in various ways. Vihltara features a more dynamic protagonist-antagonist structure, which means the player's role as well as their final target will change depending on choices made throughout. This will also have an effect on the player's story duration as they will be able to confront a possible antagonist at any stage of the game, including the very beginning.\n\nThe game will be released in September 2027."
   }
 }
