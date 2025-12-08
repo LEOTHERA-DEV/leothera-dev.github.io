@@ -703,6 +703,18 @@ td {
     }
 }
 
+@keyframes fade-in {
+    0% {
+        filter: opacity(0%);
+    }
+    75% {
+        filter: opacity(0%);
+    }
+    100% {
+        filter: opacity(100%);
+    }
+}
+
 @media (max-width: 1080px) {
     footer {
         position: fixed;
@@ -717,6 +729,9 @@ td {
         max-width: 60%;
         margin: auto;
     }
+    #about-content table {
+        font-size: 24px;
+    }
     #about-content,
     #games-content,
     #software-content {
@@ -726,11 +741,28 @@ td {
         max-width: unset;
         padding: unset;
     }
+    #games-content {
+        border: none;
+        box-shadow: none;
+    }
+    #game-info-container {
+        animation: fade-in 0.4s;
+    }
+    #game-info-container div {
+        min-width: 100vw;
+        min-height: 100vh;
+        animation: unset;
+        font-size: 32px;
+    }
+    #games-content {
+        flex-direction: column;
+        justify-content: center;
+    }
     #left-section {
         display: none;
     }
-    #links-section {
-        font-size: 32px;
+    #links-section a {
+        font-size: 48px;
     }
     #right-section {
         margin-bottom: 50px;
@@ -745,5 +777,11 @@ td {
         min-width: 400px;
         height: 800px;
         filter: grayscale(60%);
+    }
+    .game-container {
+        min-width: 90%;
+    }
+    .game-container p {
+        font-size: 64px;
     }
 }
