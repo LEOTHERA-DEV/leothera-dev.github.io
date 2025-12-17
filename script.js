@@ -28,12 +28,13 @@ function setLocalTime() {
 
 function loadImages() {
   var contentSection = document.getElementById("gallery-content");
-  const count = 28;
+  const count = 29;
   for (i = 0; i < count; i++) {
     var path = `../gallery/images/${i}.png`;
     let image = document.createElement("img");
     image.src = path;
     image.draggable = false;
+    image.style.objectFit = "cover";
     image.setAttribute("onclick", `previewImage(${i})`);
     contentSection.appendChild(image);
   }
