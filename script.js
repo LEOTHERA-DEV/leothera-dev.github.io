@@ -28,7 +28,7 @@ function setLocalTime() {
 
 function loadImages() {
   var contentSection = document.getElementById("gallery-content");
-  const count = 29;
+  const count = 35;
   for (i = 0; i < count; i++) {
     var path = `../gallery/images/${i}.png`;
     let image = document.createElement("img");

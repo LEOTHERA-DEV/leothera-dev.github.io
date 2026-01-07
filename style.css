@@ -284,6 +284,7 @@ td {
         0px 0px 3px var(--secondary-border-colour),
         inset 0px 0px 3px var(--secondary-border-colour);
     padding: 10px;
+    background: #00000080;
     animation: load-image 0.3s;
     transition: 0.3s;
 }
@@ -621,6 +622,20 @@ td {
     padding: 0;
     border: none;
     box-shadow: none;
+}
+.image_div {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 30vh;
+    min-width: 100%;
+    border-top: 3px solid var(--primary-accent);
+}
+.image_1 {
+    background-image: url("images/div_0.png");
+}
+.image_2 {
+    background-image: url("images/div_1.png");
 }
 .table-header {
     background-color: var(--element-background-colour);
