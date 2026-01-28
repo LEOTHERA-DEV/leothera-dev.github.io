@@ -554,6 +554,7 @@ h6 {
     min-height: 100vh;
     background-color: var(--overlay-background);
     backdrop-filter: blur(15px);
+    border-top: 3px solid var(--accent-colour);
 }
 
 #gallery-overlay img {
@@ -562,10 +563,23 @@ h6 {
     max-width: 95vw;
 }
 
+#gallery-overlay h1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    background-color: var(--accent-colour);
+    color: var(--secondary-colour);
+    margin: 0;
+    padding: 0px 10px;
+    border-bottom-right-radius: var(--default-radius);
+}
+
 /* Projects Content */
 #project-start-section {
     min-height: 40vh;
-    background-image: url("images/start-bg.png");
+    background-image: url("images/projects-bg.png");
     background-size: cover;
     background-position-y: center;
     background-repeat: no-repeat;

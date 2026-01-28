@@ -11,7 +11,7 @@ function loadImages() {
   var contentSection = document.getElementById("gallery-content-section");
   const count = 35;
   for (i = 0; i < count; i++) {
-    var path = `../images/gallery/${i}.png`;
+    var path = `../../images/gallery/${i}.png`;
     let image = document.createElement("img");
     image.src = path;
     image.draggable = false;
@@ -21,7 +21,7 @@ function loadImages() {
 }
 
 function previewImage(id) {
-  var path = `../images/gallery/${id}.png`;
+  var path = `../../images/gallery/${id}.png`;
   var overlayImg = document.getElementById("image-preview");
   overlayImg.src = path;
   document.getElementById("gallery-overlay").style.display = "flex";
