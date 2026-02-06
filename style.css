@@ -1,4 +1,4 @@
-:root{
+:root {
     --background-colour: #e0e0e0;
     --primary-accent: #aa00cc;
     --primary-text: #000000;
@@ -9,221 +9,124 @@
     --accent-shadow-dark: #7700dd;
 }
 
-body{
+body {
     background-color: var(--background-colour);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: "Main Font";
-    overflow: hidden;
-    user-select: none;
+    overflow-x: hidden;
+    margin: 0;
 }
 
-#art-container{
-    width: 100vw;
+#starting-section {
     height: 100vh;
-    position: absolute;
-    top: 0;
-    z-index: 2;
-    pointer-events: none;
-    animation: load-card 3s;
-}
-
-#art-left, #art-right{
-    height: 100vh;
-    width: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-    pointer-events: auto;
-}
-
-#art-left{
-    position: absolute;
-    left: 0;
-}
-
-#art-right{
-    position: absolute;
-    right: 0;
-}
-
-#art-left img, #art-right img{
-    width: 180px;
-    max-width: 180px;
-    height: 180px;
-    max-height: 180px;
-    object-fit: cover;
-    border-radius: 100%;
-    padding: 5px;
-    background-color: var(--background-colour);
-    box-shadow: 3px 3px 3px var(--shadow-dark),
-    -3px -3px 3px var(--shadow-light);
-    transition: 0.3s;
-}
-
-#art-left img:hover{
-    cursor: pointer;
-    transform: translateX(10px);
-    transition: 0.3s;
-}
-
-#art-right img:hover{
-    cursor: pointer;
-    transform: translateX(-10px);
-    transition: 0.3s;
-}
-
-#card-container{
-    min-height: 100vh;
-    max-height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    place-items: center;
-}
-
-#card-root{
-    margin: auto;
-    min-width: 540px;
-    max-width: 540px;
-    display: flex;
-    flex-wrap: wrap;
-    height: 300px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 5px var(--shadow-dark),
-    -5px -5px 5px var(--shadow-light);
-    animation: load-card 3s;
-}
-
-#card-title{
-    background-color: var(--primary-accent);
-    color: var(--secondary-text);
-    width: 60%;
-    margin: 20px 0px;
-    margin-left: 90px;
-    padding-left: 100px;
-    padding-right: 10px;
-    border-top-right-radius: 30px;
-}
-
-#card-subtitle{
-    font-size: 12px;
-    padding: 0;
-    margin: 2px;
-    margin-left: 220px;
-}
-
-#card-content{
-    display: flex;
-    flex-direction: row;
-}
-
-#card-content a{
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: var(--primary-text);
-    border-radius: 15px;
-    margin: auto 5px;
-    padding:  5px 10px;
-    box-shadow: 1px 1px 1px var(--shadow-dark),
-    -1px -1px 1px var(--shadow-light);
-    transition: 0.5s;
-}
-
-#card-content a:hover{
-    cursor: pointer;
-    text-decoration: solid underline;
-    box-shadow: 3px 3px 3px var(--shadow-dark),
-    -3px -3px 3px var(--shadow-light);
-    transition: 0.5s;
-}
-
-#card-content a:active{
-    box-shadow: inset 3px 3px 3px var(--shadow-dark),
-    inset -3px -3px 3px var(--shadow-light);
-}
-
-#card-content img{
-    border-radius: 100%;
-    border: 3px solid var(--primary-accent);
-    width: 180px;
-    min-width: 180px;
-    max-width: 180px
-    margin: 0px 15px;
-    margin-left: 10px;
-    background-color: var(--primary-accent);
-    transform: translateY(-79px);
-}
-
-#card-content p{
-    margin: 10px 0px;
-    margin-left: 25px;
-}
-
-#card-footer{
-    background-color: var(--primary-accent);
-    width: 100%;
-    max-height: 30px;
-    display: flex;
-    flex-direction: row;
-    color: var(--secondary-text);
-    transform: translateY(-50px);
-    padding: 5px 0px;
-}
-
-#card-footer a{
-    text-decoration: none;
-    color: var(--secondary-text);
-    padding: 1px 10px;
-    margin-right: 10px;
-    border-radius: 15px;
-    box-shadow: 3px 3px 3px var(--accent-shadow-dark),
-    -3px -3px 3px var(--accent-shadow-light);
-}
-
-#card-footer a:hover{
-    cursor: pointer;
-    text-decoration: solid underline;
-}
-
-#card-footer a:active{
-    box-shadow: inset 3px 3px 3px var(--accent-shadow-dark),
-    inset -3px -3px 3px var(--accent-shadow-light);
-}
-
-#card-footer img{
-    width: 150px;
     margin: 0;
     padding: 0;
-    margin-right: auto;
 }
 
-@font-face{
+#intro-section {
+    margin: 0;
+    padding: 0;
+}
+
+#intro-section h1 {
+    font-family: "Title Font";
+    text-transform: uppercase;
+    margin: 0;
+    padding-left: 30px;
+    color: var(--secondary-text);
+    border-top-right-radius: 250px;
+    background-color: var(--primary-accent);
+}
+
+#bg-image,
+#mobile-bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: -3;
+    animation: load-blur 3s;
+}
+
+#bg-image {
+    display: block;
+}
+
+#mobile-bg-image {
+    display: none;
+}
+
+#content-div {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    top: 0;
+    right: 0;
+    width: 50%;
+}
+
+#main-title {
+    filter: invert(100%);
+    margin: 0px;
+    margin-top: 50px;
+    width: 640px;
+    animation: load-image 3s;
+}
+
+#sub-title {
+    transform: translateY(-25px);
+    margin: 0;
+    animation: load-blur 4s;
+}
+
+@font-face {
     font-family: "Main Font";
     src: url("fonts/Montserrat-Regular.ttf");
 }
 
-@keyframes load-card{
-    0%{
-        filter: opacity(0%) blur(5px);
-        box-shadow:inset 5px 5px 5px var(--shadow-dark),
-        inset -5px -5px 5px var(--shadow-light);
+@font-face {
+    font-family: "Title Font";
+    src: url("fonts/Generica.otf");
+}
+
+@keyframes load-image {
+    0% {
+        filter: invert(100%) opacity(0%) blur(10px);
     }
-    25%{
-        box-shadow: 0px 0px 0px var(--shadow-dark),
-        0px 0px 0px var(--shadow-light);
+    100% {
+        filter: invert(100%) opacity(100%) blur(0px);
     }
-    50%{
+}
+
+@keyframes load-blur {
+    0% {
+        filter: opacity(0%) blur(10px);
+    }
+    100% {
         filter: opacity(100%) blur(0px);
     }
-    100%{
-        box-shadow: 5px 5px 5px var(--shadow-dark),
-        -5px -5px 5px var(--shadow-light);
+}
+
+@media (max-width: 1080px) {
+    body {
+        overflow-x: hidden;
+    }
+    #starting-section {
+        width: 100vw;
+        overflow: hidden;
+    }
+    #content-div {
+        overflow: hidden;
+        width: 50%;
+        align-items: center;
+    }
+    #bg-image {
+        display: none;
+    }
+
+    #mobile-bg-image {
+        display: block;
+        overflow: hidden;
+        transform: translateX(-50vw);
     }
 }
