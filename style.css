@@ -63,7 +63,7 @@ body {
     align-items: center;
     top: 0;
     width: 100%;
-    animation: load-blur: 3s;
+    animation: load-blur 3s;
 }
 
 #main-title {
